@@ -5,7 +5,7 @@ subtitle: Dados disponíveis e como utilizá-los
 tags: [AI, Datasets,]
 ---
 
-O aprendizado de máquina, em especial o deep learning, é uma ferramenta com grande potêncial para auxiliar na resolução de problemas de sensoriamento remoto relacionados à classificação de imagens, segmentação de instâncias e semântica, detecção de objetos e classificação de cenas. Porém, em geral, os resultados só são bons quando se utilizam milhões de imagens pre classificadas ou segmentadas no treinamento destes modelos. Assim, com intuito de auxiliar e facilitar a vida de quem pretende utilizar o deep learning em sensoriamento remoto, elaborei esta lista que apresenta as principais fontes de imagens de sensoriamento remoto e os principais artigos que utilizaram estes dados.
+O aprendizado de máquina, em especial o deep learning, é uma ferramenta com grande potêncial para auxiliar na resolução de problemas de sensoriamento remoto (SR) relacionados à classificação de imagens, segmentação de instâncias e semântica, detecção de objetos e classificação de cenas. Porém, em geral, os resultados só são bons quando se utilizam grandes bancos de dados para o treinamento end-to-end das redes. Assim, com intuito de auxiliar e facilitar a busca por datasets de SR para serem utilizados em deep learning, elaborei esta lista que apresenta as principais fontes de imagens de sensoriamento remoto.
 
 **Classificação de Cenas**
 
