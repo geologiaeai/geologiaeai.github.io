@@ -4,7 +4,7 @@
 title: Lucas Pedrosa Soares
 
 # Short description of your site
-description: Making Remote Sensing Easier
+description: Tornando o Sensoriamento Remoto mais Fácil
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -68,7 +68,7 @@ author:
 social-network-links:
   # rss: true
   email: "lpsoares@usp.br"
-  github: lpsmlgeo
+  github: lpsmlgeobr
 #  reddit: yourname
   linkedin: lucas-soares-ab462117a
 #  xing: yourname
