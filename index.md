@@ -15,6 +15,7 @@ Sou estudante de mestrado na Universidade de São Paulo (USP), com interesse de 
 Atualmente, sou pesquisador no Laboratório de Análise e Modelagem Espacial [(SPAMLab)](https://spamlab.github.io/), coordenado pelo [Prof. Dr. Carlos H.Grohmann](https://carlosgrohmann.com/).
 
 ## Contatos ##
+
 - Email -  <lpsoares@usp.br> ou <lpedrosasoares@gmail.com>
 
 - [Lattes](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K8568837U3)
@@ -33,6 +34,7 @@ Atualmente, sou pesquisador no Laboratório de Análise e Modelagem Espacial [(S
 - **2016 - 2016** - Estágio de Verão na Escola de Minas do Colorado (*Colorado School of Mines*).
 - **2015 - 2016** - Graduação Sanduíche Pelo Programa Ciência Sem Fronteiras na Universidade do Colorado, Boulder.
 - **2013 - 2018** - Bacharelado em Geologia -  Universidade de Brasília IGc-UnB. 
+
 
 #### Publicações ####
 
