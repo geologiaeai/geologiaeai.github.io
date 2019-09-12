@@ -32,7 +32,7 @@ O aprendizado de máquina, em especial o deep learning, é uma ferramenta com gr
 ### Segmentação Semântica ###
 
 | Nome | Fonte | Descrição | Resolução Espacial | 
-| ------------- | ------------- | --------------------------- | ------------- |
+| -------- | ------------- | --------------------------- | ------------- |
 | [ISPRS Potsdam 2D Semantic Labeling Contest ](http://www2.isprs.org/commissions/comm3/wg4/2d-sem-label-potsdam.html) |ISPRS| 6 classes com rasters de máscaras anotadas destas classes. As imagems apresentam 4 bandas (RGB-IR) | 0.05m | 
 | [Inria Aerial Image Labeling Dataset](https://project.inria.fr/aerialimagelabeling/contest/) |inria.fr| Máscaras e imagens RGB (5000x5000px) que representam construções em 5 diferentes cidades.) | 0.3m | 
 
