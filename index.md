@@ -14,7 +14,8 @@ Sou estudante de mestrado na Universidade de São Paulo (USP), com interesse de 
 
 Atualmente, sou pesquisador no Laboratório de Análise e Modelagem Espacial [(SPAMLab)](https://spamlab.github.io/), coordenado pelo [Prof. Dr. Carlos H.Grohmann](https://carlosgrohmann.com/).
 
-## Contatos ##
+### Contatos ###
+
 
 - Email -  <lpsoares@usp.br> ou <lpedrosasoares@gmail.com>
 
@@ -27,7 +28,7 @@ Atualmente, sou pesquisador no Laboratório de Análise e Modelagem Espacial [(S
 - [ReserachID](https://publons.com/researcher/3069730/lucas-soares/)
 
 
-## Curriculum Vitae ##
+### Curriculum Vitae ###
 
 
 - **2019 - Atual** - Mestrado na Universidade de São Paulo, na área de Geotecnologias, pelo programa de Pós Graduação em Recursos Minerias e Meio Ambiente do Instituto de Geociências (IGc-USP).
@@ -36,7 +37,10 @@ Atualmente, sou pesquisador no Laboratório de Análise e Modelagem Espacial [(S
 - **2013 - 2018** - Bacharelado em Geologia -  Universidade de Brasília IGc-UnB. 
 
 
+
 #### Publicações ####
+
+
 
 - RIBEIRO, T. G. R. ; DOMINGUES, G. C. O. ; SOARES, L. P. ; SOUZA, A. C. . CONTEXTO ESTRUTURAL NO DESENVOLVIMENTO DA CAVERNA TAMBORIL, UNAÍ-MG. In: 34º Congresso Brasileiro de Espeleologia, 2017, Ouro Preto - MG. Anais 34° Congresso Brasileiro de Espeleologia. Campinas - SP: Sociedade Brasileira de Espeleologia - SBE, 2017. v. 1. p. 297-300.
 
