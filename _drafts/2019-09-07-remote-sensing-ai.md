@@ -7,7 +7,7 @@ tags: [AI, Datasets,]
 
 O aprendizado de máquina, em especial o deep learning, é uma ferramenta com grande potêncial para auxiliar na resolução de problemas de sensoriamento remoto (SR) relacionados à classificação de imagens, segmentação de instâncias e semântica, detecção de objetos e classificação de cenas. Porém, em geral, os resultados só são bons quando se utilizam grandes bancos de dados para o treinamento end-to-end das redes. Assim, com intuito de auxiliar e facilitar a busca por datasets de SR para serem utilizados em deep learning, elaborei esta lista que apresenta as principais fontes de imagens de sensoriamento remoto.
 
-**Classificação de Cenas**
+### Classificação de Cenas ###
 
 | Nome | Fonte | Descrição | Resolução Espacial | 
 | ------------- | ------------- | --------------------------- | ------------- |
@@ -27,4 +27,16 @@ O aprendizado de máquina, em especial o deep learning, é uma ferramenta com gr
 | [**Competição**- Planet: Understanding the Amazon from Space](https://www.kaggle.com/c/planet-understanding-the-amazon-from-space) | Planet, 2017  | 13 classes de uso/ocupação do solo, 4 classes de condições de nuvens. As imagens possuem 4 bandas (RGB-NIR) e recobrem a Bacia Amazônica. | 5m |
 | [**Competição**- Statoil/C-CORE Iceberg Classifier Challenge](https://www.kaggle.com/c/statoil-iceberg-classifier-challenge) | Statoil/C-CORE, 2018 | 2 clsses (barcos e icebergs) com imagens (75X75px) de 2 bandas (HH/HV) polarizadas SAR | 5m |
 | [**Competição**- WiDS Datathon 2019 : Detection of Oil Palm Plantations](https://www.kaggle.com/c/widsdatathon2019) | Global WiDS Team & West Big Data Innovation Hub, 2019 | 2 classes de imagens (256x256px) que representam platações de óleo de palma que somam mais de 20000 imagens | 3m |
+
+
+### Segmentação Semântica ###
+
+| Nome | Fonte | Descrição | Resolução Espacial | 
+| ------------- | ------------- | --------------------------- | ------------- |
+| [ISPRS Potsdam 2D Semantic Labeling Contest ](http://www2.isprs.org/commissions/comm3/wg4/2d-sem-label-potsdam.html) |ISPRS| 6 classes com rasters de máscaras anotadas destas classes. As imagems apresentam 4 bandas (RGB-IR) | 0.05m | 
+| Nome | Fonte | Descrição | Resolução Espacial | 
+| ------------- | ------------- | --------------------------- | ------------- |
+| [Inria Aerial Image Labeling Dataset](https://project.inria.fr/aerialimagelabeling/contest/) |inria.fr| Máscaras e imagens RGB (5000x5000px) que representam construções em 5 diferentes cidades.) | 0.3m | 
+
+
 
