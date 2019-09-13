@@ -3,16 +3,13 @@
 "name": "places",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4326" } },
 "features": [
-
-{
-
-{ "type": "Feature", "properties": {"category": "research", 
+  
+  { "type": "Feature", "properties": {"category": "research", 
 "Theme": "Landslides",
 "Proj_title": "Landslide segmentation with Deep Learning", 
 "Proj_person": "Lucas Pedrosa Soares (MSc student)", 
 "Proj_link": "https://spamlab.github.io/grants/landslides/" }, 
 "geometry": { "type": "Point", "coordinates": [ -45.519424, -23.636261 ] } },
-
-
-]
+  
+  ]
 }
