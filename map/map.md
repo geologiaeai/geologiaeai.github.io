@@ -169,7 +169,7 @@ For a more immersive experience, there's a full-screen version <a href="{{site.b
     // create map
     var map = L.map('map').setView([-15, -55], 4);
     // MapBox Terrain - zooms 5-18
-    MBTerrain = L.tileLayer('http://{s}.tiles.mapbox.com/v3/carlosgrohmann.ibb4756i/{z}/{x}/{y}.png', {
+    MBTerrain = L.tileLayer('http://{s}.tiles.mapbox.com/v3/lpsmlgeo.ibb4756i/{z}/{x}/{y}.png', {
             maxZoom: 18,
             minZoom: 2,
             attribution: '&copy; Tiles Courtesy of <a href="https://www.mapbox.com" title="MapBox" target="_blank">MapBox</a>',
