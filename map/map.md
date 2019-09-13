@@ -65,8 +65,8 @@ For a more immersive experience, there's a full-screen version <a href="{{site.b
     });
 
 
-    // MapBox Terrain - zooms 5-18
-    MBTerrain = L.tileLayer('https://api.mapbox.com/styles/v1/lpsmlgeo/ck0i2xemm0g5v1cqn4xjav8cf.html?fresh=true&title=true&access_token=pk.eyJ1IjoibHBzbWxnZW8iLCJhIjoiY2swOGhyaGxpNG1neDNjbWxsbGl4NDV1ayJ9.HnSnTqxgvGwQfb95VBkPnQ#13.0/33.750013/-118.410600/0', {
+    // Cicatrizes de Deslizamento - zooms 5-18
+    Deslizamento = L.tileLayer('https://api.mapbox.com/styles/v1/lpsmlgeo/ck0i2xemm0g5v1cqn4xjav8cf.html?fresh=true&title=true&access_token=pk.eyJ1IjoibHBzbWxnZW8iLCJhIjoiY2swOGhyaGxpNG1neDNjbWxsbGl4NDV1ayJ9.HnSnTqxgvGwQfb95VBkPnQ#13.0/33.750013/-118.410600/0', {
             maxZoom: 18,
             minZoom: 0,
             attribution: '&copy; Tiles Courtesy of <a href="https://www.mapbox.com" title="MapBox" target="_blank">MapBox</a>',
