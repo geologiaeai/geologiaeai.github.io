@@ -33,7 +33,7 @@ For a more immersive experience, there's a full-screen version <a href="{{site.b
 <!-- LeafLet map  - relative link -->
 <div id="map"></div>
 <!-- places.geojson -->
-<link rel="points" type="application/json" href='{{site.baseurl}}/map/spam_places.geojson'>
+<link rel="points" type="application/json" href='{{site.baseurl}}/map/landslide_places.geojson'>
 
 <script>
     //  free tile providers, from lafletf.providers plugin
