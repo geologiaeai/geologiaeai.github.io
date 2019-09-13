@@ -1,4 +1,4 @@
----
+--
 layout: page
 title: Map
 subtitle: 
@@ -33,7 +33,7 @@ For a more immersive experience, there's a full-screen version <a href="{{site.b
 <!-- LeafLet map  - relative link -->
 <div id="map"></div>
 <!-- places.geojson -->
-<link rel="points" type="application/json" href='{{site.baseurl}}/map/landslide_places.geojson'>
+<link rel="points" type="application/json" href='{{site.baseurl}}/map/spam_places.geojson'>
 
 <script>
     //  free tile providers, from lafletf.providers plugin
@@ -65,8 +65,8 @@ For a more immersive experience, there's a full-screen version <a href="{{site.b
     });
 
 
-    // Cicatrizes de Deslizamento - zooms 5-18
-    Deslizamento = L.tileLayer('https://api.mapbox.com/styles/v1/lpsmlgeo/ck0i2xemm0g5v1cqn4xjav8cf.html?fresh=true&title=true&access_token=pk.eyJ1IjoibHBzbWxnZW8iLCJhIjoiY2swOGhyaGxpNG1neDNjbWxsbGl4NDV1ayJ9.HnSnTqxgvGwQfb95VBkPnQ#13.0/33.750013/-118.410600/0', {
+    // MapBox Terrain - zooms 5-18
+    MBTerrain = L.tileLayer('http://{s}.tiles.mapbox.com/v3/lpsmlgeo.ibb4756i/{z}/{x}/{y}.png', {
             maxZoom: 18,
             minZoom: 0,
             attribution: '&copy; Tiles Courtesy of <a href="https://www.mapbox.com" title="MapBox" target="_blank">MapBox</a>',
@@ -143,7 +143,7 @@ For a more immersive experience, there's a full-screen version <a href="{{site.b
     };
 
     var overlays = {
-        "Deslizamentos": places
+        "Study areas": places
     };
 
     L.control.layers(baseLayers, overlays).addTo(map);
