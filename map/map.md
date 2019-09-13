@@ -143,7 +143,7 @@ For a more immersive experience, there's a full-screen version <a href="{{site.b
     };
 
     var overlays = {
-        "Study areas": places
+        "Deslizamentos": places
     };
 
     L.control.layers(baseLayers, overlays).addTo(map);
