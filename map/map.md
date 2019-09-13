@@ -4,10 +4,7 @@ title: Map
 subtitle: 
 published: true
 ---
-Map created with <a href="http://leafletjs.com" target="_blank">Leaflet</a>, using base layer data from <a href="https://www.mapbox.com" target="_blank">MapBox</a>.
-There's a <a href="https://carlosgrohmann.com/blog/making-a-where-ive-been-map-with-leaflet/" target="_blank">blog post</a> explaining how to make this map.
 
-For a more immersive experience, there's a full-screen version <a href="{{site.baseurl}}/map/map_full.html" target="_blank">here</a> (opens in a new tab/window).
 &nbsp;
 &nbsp;
 <div>
