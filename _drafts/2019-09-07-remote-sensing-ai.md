@@ -24,19 +24,19 @@ O aprendizado de máquina, em especial o deep learning, é uma ferramenta com gr
 | [RSI-CB](https://github.com/lehaifeng/RSI-CB) | [Haifeng et al. 2017](https://arxiv.org/abs/1705.10450)  | Existem dois datasets - O Primeiro possui 6 categorias com 35 subclasses e mais de 24000 imagens (256x256px) por classe. O segundo possui 6 categorias com 45 subclasses com mais de 36000 imagens (128x128px) por classe.| - |
 | [SIRI-WHU](http://www.lmars.whu.edu.cn/prof_web/zhongyanfei/Num/Google.html) | [Zhao et al. 2016](https://pdfs.semanticscholar.org/bcba/ed61bdc02707a0c69a421ad5744980c6dbd2.pdf)  | 12 classes com mais de 200 imagens (200x200px) por classe. As imagens foram obtidas do Google Earth.| 2m |
 | [BigEarthNet: Large-Scale Sentinel-2 Benchmark](http://bigearth.net/) | [Sumbul et al. 2019](https://arxiv.org/abs/1902.06148)  | Diversas classes baseadas no *CORINE Land Cover Database (CLC 2018)* que somam 590326 imagens do Satélite Sentinel-2 | - |
-| [**Competição**- Planet: Understanding the Amazon from Space](https://www.kaggle.com/c/planet-understanding-the-amazon-from-space) | Planet, 2017  | 13 classes de uso/ocupação do solo, 4 classes de condições de nuvens. As imagens possuem 4 bandas (RGB-NIR) e recobrem a Bacia Amazônica. | 5m |
-| [**Competição**- Statoil/C-CORE Iceberg Classifier Challenge](https://www.kaggle.com/c/statoil-iceberg-classifier-challenge) | Statoil/C-CORE, 2018 | 2 clsses (barcos e icebergs) com imagens (75X75px) de 2 bandas (HH/HV) polarizadas SAR | 5m |
-| [**Competição**- WiDS Datathon 2019 : Detection of Oil Palm Plantations](https://www.kaggle.com/c/widsdatathon2019) | Global WiDS Team & West Big Data Innovation Hub, 2019 | 2 classes de imagens (256x256px) que representam platações de óleo de palma que somam mais de 20000 imagens | 3m |
+| [**Competição** - Planet: Understanding the Amazon from Space](https://www.kaggle.com/c/planet-understanding-the-amazon-from-space) | Planet, 2017  | 13 classes de uso/ocupação do solo, 4 classes de condições de nuvens. As imagens possuem 4 bandas (RGB-NIR) e recobrem a Bacia Amazônica. | 5m |
+| [**Competição** - Statoil/C-CORE Iceberg Classifier Challenge](https://www.kaggle.com/c/statoil-iceberg-classifier-challenge) | Statoil/C-CORE, 2018 | 2 clsses (barcos e icebergs) com imagens (75X75px) de 2 bandas (HH/HV) polarizadas SAR | 5m |
+| [**Competição** - WiDS Datathon 2019 : Detection of Oil Palm Plantations](https://www.kaggle.com/c/widsdatathon2019) | Global WiDS Team & West Big Data Innovation Hub, 2019 | 2 classes de imagens (256x256px) que representam platações de óleo de palma que somam mais de 20000 imagens | 3m |
 
 
 ### Segmentação Semântica ###
 
 | Nome | Fonte | Descrição | Resolução Espacial | 
-| ------- | ----- | ------------------------------------- | ------------- |
-| [**Competição** ISPRS Potsdam 2D Semantic Labeling Contest ](http://www2.isprs.org/commissions/comm3/wg4/2d-sem-label-potsdam.html) |ISPRS| 6 classes com imagens e máscaras anotadas destas classes. As imagems apresentam 4 bandas (RGB-IR) | 0.05m | 
-| [**Competição** Inria Aerial Image Labeling Dataset](https://project.inria.fr/aerialimagelabeling/contest/) |inria.fr| Máscaras e imagens RGB (5000x5000px) que representam construções em 5 diferentes cidades.) | 0.3m | 
-| [**Competição** Dstl Satellite Imagery Feature Detection](https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection) |Dstl| 10 classes com imagens (1x1km) com 3 (RGB) e 16 (400 – 1040nm e SWIR) bandas do satélite Worldview 3.| 0.3 - 7.5m | 
-| [**Competição** The USSOCOM Urban 3D Challenge ](https://spacenetchallenge.github.io/datasets/Urban_3D_Challenge_summary.html) |[Goldberg et al. 2017 ](https://ieeexplore.ieee.org/document/8457973)|157000 máscaras de construções, imagens ortorretificadas 2D RGB e modelos digitais de superfície e terreno gerados pos satélites comerciais. | 0.5m | 
+| ------------- | ------------- | --------------------------- | ------------- |
+| [**Competição** - ISPRS Potsdam 2D Semantic Labeling Contest ](http://www2.isprs.org/commissions/comm3/wg4/2d-sem-label-potsdam.html) |ISPRS| 6 classes com imagens e máscaras anotadas destas classes. As imagems apresentam 4 bandas (RGB-IR) | 0.05m | 
+| [**Competição** - Inria Aerial Image Labeling Dataset](https://project.inria.fr/aerialimagelabeling/contest/) |inria.fr| Máscaras e imagens RGB (5000x5000px) que representam construções em 5 diferentes cidades.) | 0.3m | 
+| [**Competição** - Dstl Satellite Imagery Feature Detection](https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection) |Dstl| 10 classes com imagens (1x1km) com 3 (RGB) e 16 (400 – 1040nm e SWIR) bandas do satélite Worldview 3.| 0.3 - 7.5m | 
+| [**Competição** - The USSOCOM Urban 3D Challenge ](https://spacenetchallenge.github.io/datasets/Urban_3D_Challenge_summary.html) |[Goldberg et al. 2017 ](https://ieeexplore.ieee.org/document/8457973)|157000 máscaras de construções, imagens ortorretificadas 2D RGB e modelos digitais de superfície e terreno gerados pos satélites comerciais. | 0.5m | 
 
 
 
