@@ -5,7 +5,7 @@ subtitle: Dados disponíveis e como utilizá-los
 tags: [AI, Datasets,]
 ---
 
-O aprendizado de máquina, em especial o deep learning, é uma ferramenta com grande potêncial para auxiliar na resolução de problemas de sensoriamento remoto (SR) relacionados à classificação de imagens, segmentação de instâncias e semântica, detecção de objetos e classificação de cenas. Porém, em geral, os resultados só são bons quando se utilizam grandes bancos de dados para o treinamento end-to-end das redes. Assim, com intuito de auxiliar e facilitar a busca por datasets de SR para serem utilizados em deep learning, elaborei esta lista que apresenta as principais fontes de imagens de sensoriamento remoto.
+O aprendizado de máquina, em especial o deep learning, é uma ferramenta com grande potêncial para auxiliar na resolução de problemas de sensoriamento remoto (SR) relacionados à classificação de imagens, segmentação de instâncias e semântica, detecção de objetos e classificação de cenas. Porém, em geral, os resultados só são bons quando se utilizam grandes bancos de dados para o treinamento end-to-end das redes. Assim, visando facilitar a busca por datasets de SR para deep learning, montei a tabela abaixo.
 
 ### Classificação de Cenas ###
 
@@ -33,8 +33,14 @@ O aprendizado de máquina, em especial o deep learning, é uma ferramenta com gr
 
 | Nome | Fonte | Descrição | Resolução Espacial | 
 | ------------- | ------------- | --------------------------- | ------------- |
-| [ISPRS Potsdam 2D Semantic Labeling Contest ](http://www2.isprs.org/commissions/comm3/wg4/2d-sem-label-potsdam.html) |ISPRS| 6 classes com rasters de máscaras anotadas destas classes. As imagems apresentam 4 bandas (RGB-IR) | 0.05m | 
-| [Inria Aerial Image Labeling Dataset](https://project.inria.fr/aerialimagelabeling/contest/) |inria.fr| Máscaras e imagens RGB (5000x5000px) que representam construções em 5 diferentes cidades.) | 0.3m | 
+| [**Competição** ISPRS Potsdam 2D Semantic Labeling Contest ](http://www2.isprs.org/commissions/comm3/wg4/2d-sem-label-potsdam.html) |ISPRS| 6 classes com imagens e máscaras anotadas destas classes. As imagems apresentam 4 bandas (RGB-IR) | 0.05m | 
+| [**Competição** Inria Aerial Image Labeling Dataset](https://project.inria.fr/aerialimagelabeling/contest/) |inria.fr| Máscaras e imagens RGB (5000x5000px) que representam construções em 5 diferentes cidades.) | 0.3m | 
+| [**Competição** Dstl Satellite Imagery Feature Detection](https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection) |Dstl| 10 classes com imagens (1x1km) com 3 (RGB) e 16 (400 – 1040nm e SWIR) bandas do satélite Worldview 3.| 0.3 - 7.5m | 
+| [**Competição** The USSOCOM Urban 3D Challenge ](https://spacenetchallenge.github.io/datasets/Urban_3D_Challenge_summary.html) |[Goldberg et al. 2017] (https://ieeexplore.ieee.org/document/8457973)|157000 máscaras de construções, imagens ortorretificadas 2D RGB e modelos digitais de superfície e terreno gerados pos satélites comerciais. | 0.5m | 
+
+
+A maioria dos links para os datesets foram obtido do repositório do [**Chrieke**](https://github.com/chrieke/awesome-satellite-imagery-datasets). 
+
 
 
 
