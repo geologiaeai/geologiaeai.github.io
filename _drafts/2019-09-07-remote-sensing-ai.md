@@ -11,7 +11,10 @@ O aprendizado de máquina, em especial o deep learning, é uma ferramenta com gr
 
 | Nome | Fonte | Descrição | Resolução Espacial | 
 | ------------- | ------------- | --------------------------- | ------------- |
-| [CrowdAI Mapping Challenge](https://www.crowdai.org/challenges/mapping-challenge) | CrowdAI | 340000 imagens RGB de construções (330x300px) anotados no formato MS-COCO.  | - | 
+| [CrowdAI Mapping Challenge](https://www.crowdai.org/challenges/mapping-challenge) | CrowdAI | 340.000 imagens RGB de construções (330x300px) anotados no formato MS-COCO.  | - | 
+| [Airbus Ship Detection Challenge](https://www.kaggle.com/c/airbus-ship-detection) | Airbus | 131.000 imagem e máscara de barcos e 104000 imagens e máscaras de trens | 1.5m | 
+| [Canadian Building Footprints](https://github.com/Microsoft/CanadianBuildingFootprints) | Microsoft | 11.842.186 footprints de construções no Canada.| - | 
+| [US Building Footprints](https://github.com/microsoft/USBuildingFootprints) | Microsoft | 125.192.184 footprints de construções nos Estados Unidos.| - | 
 
 
 ### Classificação de Cenas ###
