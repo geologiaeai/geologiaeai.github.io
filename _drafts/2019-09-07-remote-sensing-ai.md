@@ -7,6 +7,13 @@ tags: [AI, Datasets,]
 
 O aprendizado de máquina, em especial o deep learning, é uma ferramenta com grande potêncial para auxiliar na resolução de problemas de sensoriamento remoto (SR) relacionados à classificação de imagens, segmentação de instâncias e semântica, detecção de objetos e classificação de cenas. Porém, em geral, os resultados só são bons quando se utilizam grandes bancos de dados para o treinamento end-to-end das redes. Assim, visando facilitar a busca por datasets de SR para deep learning, montei a tabela abaixo.
 
+### Segmentação de Instância
+
+| Nome | Fonte | Descrição | Resolução Espacial | 
+| ------------- | ------------- | --------------------------- | ------------- |
+| [CrowdAI Mapping Challenge](https://www.crowdai.org/challenges/mapping-challenge) | CrowdAI | 340000 imagens RGB de construções (330x300px) anotados no formato MS-COCO.  | - | 
+
+
 ### Classificação de Cenas ###
 
 | Nome | Fonte | Descrição | Resolução Espacial | 
