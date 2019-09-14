@@ -32,8 +32,11 @@ Atualmente, sou pesquisador no Laboratório de Análise e Modelagem Espacial [(S
 
 
 - **2019 - Atual** - Mestrado na Universidade de São Paulo, na área de Geotecnologias, pelo programa de Pós Graduação em Recursos Minerias e Meio Ambiente do Instituto de Geociências (IGc-USP).
+
 - **2016 - 2016** - Estágio de Verão na Escola de Minas do Colorado (*Colorado School of Mines*).
+
 - **2015 - 2016** - Graduação Sanduíche Pelo Programa Ciência Sem Fronteiras na Universidade do Colorado, Boulder.
+
 - **2013 - 2018** - Bacharelado em Geologia -  Universidade de Brasília IGc-UnB. 
 
 
@@ -42,11 +45,11 @@ Atualmente, sou pesquisador no Laboratório de Análise e Modelagem Espacial [(S
 
 
 
-- RIBEIRO, T. G. R. ; DOMINGUES, G. C. O. ; SOARES, L. P. ; SOUZA, A. C. . CONTEXTO ESTRUTURAL NO DESENVOLVIMENTO DA CAVERNA TAMBORIL, UNAÍ-MG. In: 34º Congresso Brasileiro de Espeleologia, 2017, Ouro Preto - MG. Anais 34° Congresso Brasileiro de Espeleologia. Campinas - SP: Sociedade Brasileira de Espeleologia - SBE, 2017. v. 1. p. 297-300.
+- Ribeiro, T. G. R. ; Domingues, G. C. O. ; Soares, L. P. ; SOUZA, A. C., 2017. Contexto estrutural no desenvolvimento da Caverna Tamboril, Unaí-MG. 34º Congresso Brasileiro de Espeleologia, Ouro Preto - MG. [Paper](http://www.cavernas.org.br/anais34cbe/34cbe_297-300.pdf)
 
-- RIBEIRO, T. G. R. ; SOARES, L. P. . MODELAGEM ESTRUTURAL DO MORRO TAMBORIL, UNAÍ-MG.. In: 49º CONGRESSO BRASILEIRO DE GEOCIÊNCIAS, 2018, RIO DE JANEIRO. ANAIS - 49° CONGRESSO BRASILEIRO DE GEOLOGIA, 2018.
+- Ribeiro, T. G. R. ; Soares, L. P., 2018. Modelagem Estrutural do Morro do Tamboril, Unaí - MG. 49º Congresso Brasileiro de Geociências, Rio de Janeiro. [Resumo](http://cbg2018anais.siteoficial.ws/resumos/8928.pdf)
 
-- F.B.C, FLEURY ; SOARES, L. P. . O USO DE VANTS COMO FERRAMENTA DE BAIXO CUSTO NA GERAÇÃO DE BASE CARTOGRÁFICA 2D E 3D DE ALTA RESOLUÇÃO EM GEOLOGIA: CASO DE ESTUDO DA PEDREIRA DO TAMBORIL, UNAÍ ? MG. In: 49º CONGRESSO BRASILEIRO DE GEOCIÊNCIAS, 2018, RIO DE JANEIRO. ANAIS - 49º CONGRESSO BRASILEIRO DE GEOCIÊNCIAS, 2018. p. 1432.
+- Fleury, F.B.C ; Soares, L. P., 2018 . O uso de VANTs como ferramenta de baixo custo na geraação de base cartográfica 2D e 3D de alta resolução em geologa: O caso de estudo da pedreira do Tamboril, Unaí-MG. [Resumo](http://cbg2018anais.siteoficial.ws/resumos/8887.pdf)
 
 
 
