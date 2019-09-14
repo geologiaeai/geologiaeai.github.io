@@ -36,7 +36,7 @@ O aprendizado de máquina, em especial o deep learning, é uma ferramenta com gr
 | [**Competição** ISPRS Potsdam 2D Semantic Labeling Contest ](http://www2.isprs.org/commissions/comm3/wg4/2d-sem-label-potsdam.html) |ISPRS| 6 classes com imagens e máscaras anotadas destas classes. As imagems apresentam 4 bandas (RGB-IR) | 0.05m | 
 | [**Competição** Inria Aerial Image Labeling Dataset](https://project.inria.fr/aerialimagelabeling/contest/) |inria.fr| Máscaras e imagens RGB (5000x5000px) que representam construções em 5 diferentes cidades.) | 0.3m | 
 | [**Competição** Dstl Satellite Imagery Feature Detection](https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection) |Dstl| 10 classes com imagens (1x1km) com 3 (RGB) e 16 (400 – 1040nm e SWIR) bandas do satélite Worldview 3.| 0.3 - 7.5m | 
-| [**Competição** The USSOCOM Urban 3D Challenge ](https://spacenetchallenge.github.io/datasets/Urban_3D_Challenge_summary.html) |[Goldberg et al. 2017] (https://ieeexplore.ieee.org/document/8457973)|157000 máscaras de construções, imagens ortorretificadas 2D RGB e modelos digitais de superfície e terreno gerados pos satélites comerciais. | 0.5m | 
+| [**Competição** The USSOCOM Urban 3D Challenge ](https://spacenetchallenge.github.io/datasets/Urban_3D_Challenge_summary.html) |[Goldberg et al. 2017 ](https://ieeexplore.ieee.org/document/8457973)|157000 máscaras de construções, imagens ortorretificadas 2D RGB e modelos digitais de superfície e terreno gerados pos satélites comerciais. | 0.5m | 
 
 
 
