@@ -39,6 +39,7 @@ O aprendizado de máquina, em especial o deep learning, é uma ferramenta com gr
 | [**Competição** The USSOCOM Urban 3D Challenge ](https://spacenetchallenge.github.io/datasets/Urban_3D_Challenge_summary.html) |[Goldberg et al. 2017] (https://ieeexplore.ieee.org/document/8457973)|157000 máscaras de construções, imagens ortorretificadas 2D RGB e modelos digitais de superfície e terreno gerados pos satélites comerciais. | 0.5m | 
 
 
+
 A maioria dos links para os datesets foram obtido do repositório do [**Chrieke**](https://github.com/chrieke/awesome-satellite-imagery-datasets). 
 
 
