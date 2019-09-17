@@ -41,7 +41,7 @@ Atualmente, sou pesquisador no Laboratório de Análise e Modelagem Espacial [(S
 
 
 
-#### Publicações ####
+#### Trabalhos e Publicações ####
 
 
 
