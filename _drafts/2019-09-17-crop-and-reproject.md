@@ -7,7 +7,7 @@ tags: [Python, rms, Sensoriamento Remoto]
 
 ## Objetivos
 
-1. Aprender a Cortar e Reprojetar um Raster utilizando o Python
+1. Cortar e Reprojetar um Raster utilizando o Python
 
 
 ### Importar Bibliotecas do Python
@@ -83,15 +83,64 @@ def reproject_et(inpath, outpath, new_crs):
 #Executar a função de reprojeção
 reproject_et(
 #Inpath = local onde se encontra a imagem que será reprojetada
-inpath = '/Users/Neto/Desktop/Aprendizados/blog/notebook/landsat_empilhamento_de_bandas/nova_friburgo_stack.tif',
+inpath = '/Users/.../raster.tif',
 #Outpath = Local onde a imagem reprojetada será salva
-outpath = '/Users/Neto/Desktop/Aprendizados/Mestrado/Materiais/meus_modelos/primeiro_teste/imagem/landsat_repoject.tif', 
+outpath = '/Users/../raster_repoject.tif', 
 # Novo Sistema de Coordenadas, neste caso utilizaremos o WGS 84 (EPSG:4326) como exemplo.
 new_crs = 'EPSG:4326')
 ```
 
+## Verificar se o arquivo foi reprojetado
+``` python
+raster_reproject = rio.open('/Users/.../raster_repoject.tif')
+print(landsat_data.crs)
+# Se o valor exibido for EPSG: 4326 o arquivo foi corretamente reprojetado
+```
 
+## Cortar a Imagem na dimensões do shapefile
+``` python
+with rio.open("/Users/.../raster_repoject.tif") as landsat_image:
+    # Cortar a imagem na dimensão do shapefile
+    # A variável raster_crop conterá a imagem cortada
+    # A variável raster_crop_metadata conterá os metados da imagem que serão atualizados posteriormente
+    raster_crop, raster_crop_metadata = es.crop_image(raster_image, crop_extent)
+```
 
+## Plotar a imagem cortada
+
+``` python
+# obter as dimnesões da imagem recortada
+raster_crop_affine = raster_crop_metadata["transform"]
+# Determinar a extensão do plot
+plot_extent = plotting_extent(landsat_crop[0], raster_crop_affine)
+# Plotar a imagem
+ep.plot_bands(raster_crop[0],
+              extent=plot_extent,
+              cmap='Greys',
+              title="Raster Recortado",
+              scale=False)
+plt.show()
+```
+
+## Atualizar os metados para ficar registrado as novas dimensões do raster
+
+``` python
+raster_crop_metadata.update({'transform': raster_crop_affine,
+                       'height': landsat_crop.shape[1],
+                       'width': landsat_crop.shape[2],
+                         'nodata': 0})
+landsat_crop_meta
+
+```
+
+## Exportar a imagem cortada
+
+``` python
+path_out = "/Users/.../landsat_cropped.tif"
+with rio.open(path_out, 'w', **landsat_crop_metadata) as ff:
+    ff.write(raster_crop[0], 1)
+
+```
 
 
 
