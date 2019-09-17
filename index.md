@@ -8,7 +8,7 @@ meta-description: "Geólogo com interesse de Pesquisa em Sensoriamento Remoto e 
 
 ---
 
-## Sobre Mim ##
+## Quem sou eu ##
 
 Sou estudante de mestrado na Universidade de São Paulo (USP), com interesse de pesquisa em Geologia, Sensoriamento Remoto e Inteligência Artificial. Minha pesquisa de mestrado consiste na detecção automática de cicactrizes de deslizamento de terra com *deep learning*.
 
@@ -35,7 +35,7 @@ Atualmente, sou pesquisador no Laboratório de Análise e Modelagem Espacial [(S
 
 - **2016 - 2016** - Estágio de Verão na Escola de Minas do Colorado (*Colorado School of Mines*).
 
-- **2015 - 2016** - Graduação Sanduíche Pelo Programa Ciência Sem Fronteiras na Universidade do Colorado, Boulder.
+- **2015 - 2016** - Graduação Sanduíche Pelo Programa Ciência Sem Fronteiras na Universidade do Colorado, Boulder (*University of Colorado, Boulder.
 
 - **2013 - 2018** - Bacharelado em Geologia -  Universidade de Brasília IGc-UnB. 
 
