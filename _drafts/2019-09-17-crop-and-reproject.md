@@ -12,14 +12,12 @@ tags: [Python, rms, Sensoriamento Remoto]
 
 ### Bibliotecas do Python
 
-```
-{
-  import os
+``` python
+import os
 import numpy as np
 import rasterio as rio
 import earthpy as et
 from rasterio.warp import calculate_default_transform, reproject, Resampling
-}
 ```
 
 
