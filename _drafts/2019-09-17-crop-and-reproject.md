@@ -142,6 +142,9 @@ with rio.open(path_out, 'w', **landsat_crop_metadata) as ff:
 
 ```
 
+#### Referências
 
+- https://www.earthdatascience.org/courses/earth-analytics-python/lidar-raster-data/reproject-raster/
+- https://www.earthdatascience.org/courses/earth-analytics-python/lidar-raster-data/crop-raster-data-with-shapefile-in-python/
 
 
