@@ -22,8 +22,8 @@ description: Tornando o Sensoriamento Remoto mais Fácil
 navbar-links:
   Blog: "blog/"
   Projetos:
-    - Mestrado: ""
-    - Mapa de deslizamentos: ""
+    # - Mestrado: ""
+    # - Mapa de deslizamentos: ""
   EN: "https://lpsmlgeo.github.io"
 
 # Image to show in the navigation bar - image must be a square (width = height)
