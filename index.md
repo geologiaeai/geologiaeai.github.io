@@ -47,9 +47,9 @@ Atualmente, sou pesquisador no Laboratório de Análise e Modelagem Espacial [(S
 
 - Ribeiro, T. G. R. ; Domingues, G. C. O. ; Soares, L. P. ; SOUZA, A. C., 2017. Contexto estrutural no desenvolvimento da Caverna Tamboril, Unaí-MG. 34º Congresso Brasileiro de Espeleologia, Ouro Preto - MG. [Paper](http://www.cavernas.org.br/anais34cbe/34cbe_297-300.pdf)
 
-- Ribeiro, T. G. R. ; Soares, L. P., 2018. Modelagem Estrutural do Morro do Tamboril, Unaí - MG. 49º Congresso Brasileiro de Geociências, Rio de Janeiro. [Resumo](http://cbg2018anais.siteoficial.ws/resumos/8928.pdf)
+- Ribeiro, T. G. R. ; Soares, L. P., 2018. Modelagem Estrutural do Morro do Tamboril, Unaí - MG. 49º Congresso Brasileiro de Geociências, Rio de Janeiro - RJ. [Resumo](http://cbg2018anais.siteoficial.ws/resumos/8928.pdf)
 
-- Fleury, F.B.C ; Soares, L. P., 2018 . O uso de VANTs como ferramenta de baixo custo na geraação de base cartográfica 2D e 3D de alta resolução em geologa: O caso de estudo da pedreira do Tamboril, Unaí-MG. 49º Congresso Brasileiro de Geociências, Rio de Janeiro. [Resumo](http://cbg2018anais.siteoficial.ws/resumos/8887.pdf)
+- Fleury, F.B.C ; Soares, L. P., 2018 . O uso de VANTs como ferramenta de baixo custo na geraação de base cartográfica 2D e 3D de alta resolução em geologa: O caso de estudo da pedreira do Tamboril, Unaí-MG. 49º Congresso Brasileiro de Geociências, Rio de Janeiro - RJ. [Resumo](http://cbg2018anais.siteoficial.ws/resumos/8887.pdf)
 
 
 
