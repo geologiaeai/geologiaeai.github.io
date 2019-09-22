@@ -78,7 +78,7 @@ Para carregar o arquivo shapefile (.shp) ou GeoJson (.geojson) defina a variáve
 
 ``` python
 
-shape_path = /Users/.../poligono.geojson
+shape_path = "/Users/.../poligono.geojson"
 train_df = gpd.read_file(shape_path)
 
 ```
@@ -104,9 +104,8 @@ Caso os Valores sejam diferentes, é necessário reprojetar o Vetor (Shapefile o
 Para gerar a máscara binária basta rodar o código abaixo. Ao final, a máscara gerada será plotada.
 
 ```python
- 
- #Função que gera o polígono
- def poly_from_utm(polygon, transform):
+#Função que gera o polígono
+def poly_from_utm(polygon, transform):
     poly_pts = []
     
     # Gerar um polígono a partir de multipolígonos.
