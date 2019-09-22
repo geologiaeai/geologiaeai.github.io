@@ -10,12 +10,11 @@ Este tutorial tem como intuito mostrar como gerar um raster binário, muito util
 
 &nbsp;
 
-&nbsp;
-
 ### Workflow
 
+&nbsp;
 
-- [0. Importar as Bibliotecas;](#markdown-header-0.-Importar-as-bibliotecas) 
+- [0. Importar as Bibliotecas;](#0-importar-as-bibliotecas) 
 - 1 -  Carregar a Imagem .tif;
 - 2 -  Carregar o Shapefile ou GeoJson;
 - 3 -  Verificar se os Sistemas de Cordenadas de Referência (CRS) são os mesmos;
@@ -25,12 +24,9 @@ Este tutorial tem como intuito mostrar como gerar um raster binário, muito util
 
 &nbsp;
 
-&nbsp;
-
-
 #### 0. Importar as bibliotecas
 
-
+&nbsp;
 
 ``` python
 
@@ -53,11 +49,9 @@ import matplotlib.pyplot as plt
 ```
 &nbsp;
 
-&nbsp;
-
 #### 1. Carregar a Imagem .tif
 
-
+&nbsp;
 
 Para carregar a imagem .tif defina a variável raster_path como o caminho para a imagem sobre a qual será gerada a máscara binária.
 
@@ -72,11 +66,9 @@ with rasterio.open(raster_path, "r") as src:
 
 &nbsp;
 
-&nbsp;
-
 #### 2. Carregar o Shapefile ou GeoJson 
 
-
+&nbsp;
 
 Para carregar o arquivo shapefile (.shp) ou GeoJson (.geojson) defina a variável shape_path com o local onde está localizado o arquivo.
 
@@ -90,10 +82,9 @@ train_df = gpd.read_file(shape_path)
 
 &nbsp;
 
-&nbsp;
-
 #### 3. Verificar se os Sistemas de Cordenadas de Referência (CRS) são os mesmos;
 
+&nbsp;
 
 Caso os Valores sejam diferentes, é necessário reprojetar o Vetor (Shapefile ou GeoJson) ou a imagem (raster). Para isso, pode-se utilizar o software QGIS.  
 
@@ -109,7 +100,7 @@ Caso os Valores sejam diferentes, é necessário reprojetar o Vetor (Shapefile o
 
 #### 4. Gerar a Máscara Binária
 
-
+&nbsp;
 
 Para gerar a máscara binária basta rodar o código abaixo. Ao final, a máscara gerada será plotada.
 
@@ -152,14 +143,12 @@ plt.figure(figsize=(15,15))
 plt.imshow(mask)
 
 ```
-&nbsp;
 
 &nbsp;
-
 
 #### 5. Salvar
 
-
+&nbsp;
 
 Para salvar, deve-se converter o arquivo para 'uint16' e definir o local que será salvo o arquivo.
 
@@ -175,11 +164,9 @@ with rasterio.open(arquivo_salvar, 'w', **bin_mask_meta) as dst:
 
 &nbsp;
 
-&nbsp;
-
 #### 6. Definir uma Função que gera máscaras binárias.
 
-
+&nbsp;
 
 A função generate_mask(), tem como entrada os parâmentros abaixo:
 
@@ -255,9 +242,6 @@ def generate_mask(raster_path, shape_path, output_path, file_name):
 
 &nbsp;
 
-&nbsp;
-
-
 #### Referências
 
 - <https://medium.com/datadriveninvestor/preparing-aerial-imagery-for-crop-classification-ce05d3601c68>
@@ -265,8 +249,3 @@ def generate_mask(raster_path, shape_path, output_path, file_name):
 - <https://rasterio.readthedocs.io/en/stable/api/rasterio.mask.html>
 
 &nbsp;
-
-&nbsp;
-
-
-
