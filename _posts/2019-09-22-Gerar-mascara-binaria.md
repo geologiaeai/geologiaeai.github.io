@@ -8,7 +8,7 @@ tags: [AI, Python, rms, Sensoriamento Remoto, Máscara Binária, Tutorial]
 Este tutorial tem como intuito mostrar como gerar um raster binário, muito utilizado em problemas de segmentação semântica, com o python. As máscaras binárias posseum o valor de 0 para o background e 1 para a classe de interesse.
 
 
-![](/img/binary_mask.tif){:width="70%"} 
+![](/img/binary_mask.gif){:width="70%"} 
 
 
 ### Workflow
