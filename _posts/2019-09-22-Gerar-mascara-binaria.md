@@ -105,7 +105,7 @@ Para gerar a máscara binária basta rodar o código abaixo. Ao final, a máscar
 
 ```python
  
- #Função que 
+ #Função que gera o polígono
  def poly_from_utm(polygon, transform):
     poly_pts = []
     
@@ -177,16 +177,25 @@ A função generate_mask(), tem como entrada os parâmentros abaixo:
 
 def generate_mask(raster_path, shape_path, output_path, file_name):
     
-    """Os CRS devem ser iguais para gerar a máscara binária"""
+    """Os CRS devem ser iguais para gerar a máscara binária
+    
+    raster_path = local onde a imagem .tif esta localizada;
+
+    shape_path = local onde o Shapefile ou GeoJson está localizado.
+
+    output_path = local onde será salva a máscara binária gerada.
+
+    file_name = nome do aquivo que será gerado.
+    
+    """
     
     #Carregar o Raster
-    #raster_path = folder where the image is located
     
     with rasterio.open(raster_path, "r") as src:
         raster_img = src.read()
         raster_meta = src.meta
     
-    #Carregar o shapefile or GeoJson
+    #Carregar o shapefile ou GeoJson
     #shape_path = folder where the shapefile is located
     train_df = gpd.read_file(shape_path)
     
@@ -199,14 +208,11 @@ def generate_mask(raster_path, shape_path, output_path, file_name):
     def poly_from_utm(polygon, transform):
         poly_pts = []
 
-        # make a polygon from multipolygon
         poly = cascaded_union(polygon)
         for i in np.array(poly.exterior.coords):
 
-            # transfrom polygon to image crs, using raster meta
             poly_pts.append(~transform * tuple(i))
 
-        # make a shapely Polygon object
         new_poly = Polygon(poly_pts)
         return new_poly
     
