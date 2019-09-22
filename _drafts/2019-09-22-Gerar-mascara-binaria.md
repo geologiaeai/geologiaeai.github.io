@@ -55,7 +55,9 @@ with rasterio.open(raster_path, "r") as src:
 
 ```
 
-#### 2. Carregar o Shapefile ou GeoJson .tif
+#### 2. Carregar o Shapefile ou GeoJson 
+
+Para carregar o arquivo shapefile (.shp) ou GeoJson (.geojson) defina a variável shape_path com o local onde está localizado o arquivo.
 
 
 ``` python
@@ -76,7 +78,9 @@ Caso os Valores sejam diferentes, é necessário reprojetar o Vetor (Shapefile o
 
 ```
 
-#### 4. Gerar a Máscara Binária;
+#### 4. Gerar a Máscara Binária
+
+Para gerar a máscara binária basta rodar o código abaixo. Ao final, a máscara gerada será plotada.
 
 ```python
  
@@ -117,6 +121,103 @@ plt.figure(figsize=(15,15))
 plt.imshow(mask)
 
 ```
+
+#### 5. Salvar
+
+Para salvar, deve-se converter o arquivo para 'uint16' e definir o local que será salvo o arquivo.
+
+```python
+mask = mask.astype("uint16")
+arquivo_salvar = "/Users/.../mascaras/train.tif"
+bin_mask_meta = src.meta.copy()
+bin_mask_meta.update({'count': 1})
+with rasterio.open(arquivo_salvar, 'w', **bin_mask_meta) as dst:
+    dst.write(mask * 255, 1)
+
+```
+
+#### 6. Definir uma Função que gera máscaras binárias.
+
+A função generate_mask(), tem como entrada os parâmentros abaixo:
+
+**raster_path** = local onde a imagem .tif esta localizada;
+
+**shape_path** = local onde o Shapefile ou GeoJson está localizado.
+
+**output_path** = local onde será salva a máscara binária gerada.
+
+**file_name** = nome do aquivo que será gerado.
+
+
+```python
+
+def generate_mask(raster_path, shape_path, output_path, file_name):
+    
+    """crs MUST be the same in order to generate the mask"""
+    
+    #load_raster
+    #raster_path = folder where the image is located
+    
+    with rasterio.open(raster_path, "r") as src:
+        raster_img = src.read()
+        raster_meta = src.meta
+    
+    #load shapefile or GeoJson
+    #shape_path = folder where the shapefile is located
+    train_df = gpd.read_file(shape_path)
+    
+    if train_df.crs != src.crs:
+        print(" Raster has crs: {} and Vector has crs: {}.\n Convert to the same Coordinate Reference System and try again!".format(src.crs,train_df.crs))
+        
+        
+    def poly_from_utm(polygon, transform):
+        poly_pts = []
+
+        # make a polygon from multipolygon
+        poly = cascaded_union(polygon)
+        for i in np.array(poly.exterior.coords):
+
+            # transfrom polygon to image crs, using raster meta
+            poly_pts.append(~transform * tuple(i))
+
+        # make a shapely Polygon object
+        new_poly = Polygon(poly_pts)
+        return new_poly
+    
+    
+    poly_shp = []
+    im_size = (src.meta['height'], src.meta['width'])
+    for num, row in train_df.iterrows():
+        if row['geometry'].geom_type == 'Polygon':
+            poly = poly_from_utm(row['geometry'], src.meta['transform'])
+            poly_shp.append(poly)
+        else:
+            for p in row['geometry']:
+                poly = poly_from_utm(p, src.meta['transform'])
+                poly_shp.append(poly)
+
+    mask = rasterize(shapes=poly_shp,
+                     out_shape=im_size)
+    
+    mask = mask.astype("uint16")
+    
+    bin_mask_meta = src.meta.copy()
+    bin_mask_meta.update({'count': 1})
+    os.chdir(output_path)
+    with rasterio.open(file_name, 'w', **bin_mask_meta) as dst:
+        dst.write(mask * 255, 1)
+
+
+```
+
+
+#### Referências
+
+- https://medium.com/datadriveninvestor/preparing-aerial-imagery-for-crop-classification-ce05d3601c68
+
+- https://rasterio.readthedocs.io/en/stable/api/rasterio.mask.html
+
+
 
 
 
