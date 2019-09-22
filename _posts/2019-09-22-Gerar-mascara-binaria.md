@@ -9,6 +9,7 @@ Este tutorial tem como intuito mostrar como gerar um raster binário, muito util
 
 
 &nbsp;
+
 &nbsp;
 
 ### Workflow
@@ -23,6 +24,7 @@ Este tutorial tem como intuito mostrar como gerar um raster binário, muito util
 - 6 -  Definir uma Função que gera máscaras binárias.
 
 &nbsp;
+
 &nbsp;
 
 
@@ -50,6 +52,7 @@ import matplotlib.pyplot as plt
 
 ```
 &nbsp;
+
 &nbsp;
 
 #### 1. Carregar a Imagem .tif
@@ -68,6 +71,7 @@ with rasterio.open(raster_path, "r") as src:
 ```
 
 &nbsp;
+
 &nbsp;
 
 #### 2. Carregar o Shapefile ou GeoJson 
@@ -85,6 +89,7 @@ train_df = gpd.read_file(shape_path)
 ```
 
 &nbsp;
+
 &nbsp;
 
 #### 3. Verificar se os Sistemas de Cordenadas de Referência (CRS) são os mesmos;
@@ -99,6 +104,7 @@ Caso os Valores sejam diferentes, é necessário reprojetar o Vetor (Shapefile o
 ```
 
 &nbsp;
+
 &nbsp;
 
 #### 4. Gerar a Máscara Binária
@@ -147,6 +153,7 @@ plt.imshow(mask)
 
 ```
 &nbsp;
+
 &nbsp;
 
 
@@ -167,6 +174,7 @@ with rasterio.open(arquivo_salvar, 'w', **bin_mask_meta) as dst:
 ```
 
 &nbsp;
+
 &nbsp;
 
 #### 6. Definir uma Função que gera máscaras binárias.
@@ -246,6 +254,7 @@ def generate_mask(raster_path, shape_path, output_path, file_name):
 ```
 
 &nbsp;
+
 &nbsp;
 
 
@@ -256,6 +265,7 @@ def generate_mask(raster_path, shape_path, output_path, file_name):
 - <https://rasterio.readthedocs.io/en/stable/api/rasterio.mask.html>
 
 &nbsp;
+
 &nbsp;
 
 
