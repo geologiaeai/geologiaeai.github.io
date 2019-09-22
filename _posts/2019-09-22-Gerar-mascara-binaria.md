@@ -12,13 +12,20 @@ Este tutorial tem como intuito mostrar como gerar um raster binário, muito util
 
 
 - [0. Importar as Bibliotecas](#0-importar-as-bibliotecas) 
+
 - [1. Carregar a Imagem .tif](#1-carregar-a-imagem-tif)
+
 - [2. Carregar o Shapefile ou GeoJson](#2-carregar-o-shapefile-ou-geojson)
+
 - [3. Verificar se os Sistemas de Cordenadas de Referência (CRS) são os mesmos](#3-verificar-se-os-sistemas-de-cordenadas-de-referência-crs-são-os-mesmos)
+
 - [4. Gerar a Máscara Binária](#4-gerar-a-máscara-binária)
+
 - [5. Salvar](#5-salvar)
+
 - [6. Definir uma Função que gera Máscaras Binárias](#6-definir-uma-função-que-gera-máscaras-binárias)
 
+&nbsp;
 
 #### 0. Importar as bibliotecas
 
