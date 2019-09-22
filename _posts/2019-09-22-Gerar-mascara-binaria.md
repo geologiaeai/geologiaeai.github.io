@@ -174,23 +174,25 @@ A função generate_mask(), tem como entrada os parâmentros abaixo:
 
 def generate_mask(raster_path, shape_path, output_path, file_name):
     
-    """crs MUST be the same in order to generate the mask"""
+    """Os CRS devem ser iguais para gerar a máscara binária"""
     
-    #load_raster
+    #Carregar o Raster
     #raster_path = folder where the image is located
     
     with rasterio.open(raster_path, "r") as src:
         raster_img = src.read()
         raster_meta = src.meta
     
-    #load shapefile or GeoJson
+    #Carregar o shapefile or GeoJson
     #shape_path = folder where the shapefile is located
     train_df = gpd.read_file(shape_path)
     
+    #Verificar se o CRS é o mesmo
     if train_df.crs != src.crs:
-        print(" Raster has crs: {} and Vector has crs: {}.\n Convert to the same Coordinate Reference System and try again!".format(src.crs,train_df.crs))
+        print(" Raster crs: {} and Vector crs: {}.\n Converta para o mesmo Sistema de Coordenadas de Referência!".format(src.crs,train_df.crs))
         
         
+    #Função para gerar a máscara
     def poly_from_utm(polygon, transform):
         poly_pts = []
 
@@ -220,6 +222,7 @@ def generate_mask(raster_path, shape_path, output_path, file_name):
     mask = rasterize(shapes=poly_shp,
                      out_shape=im_size)
     
+    #Salvar
     mask = mask.astype("uint16")
     
     bin_mask_meta = src.meta.copy()
