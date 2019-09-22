@@ -41,6 +41,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 ```
+<br/><br/>
 
 #### 1. Carregar a Imagem .tif
 
@@ -56,6 +57,7 @@ with rasterio.open(raster_path, "r") as src:
 
 ```
 
+<br/><br/>
 
 #### 2. Carregar o Shapefile ou GeoJson 
 
@@ -70,6 +72,7 @@ train_df = gpd.read_file(shape_path)
 
 ```
 
+<br/><br/>
 
 #### 3. Verificar se os Sistemas de Cordenadas de Referência (CRS) são os mesmos;
 
@@ -81,6 +84,8 @@ Caso os Valores sejam diferentes, é necessário reprojetar o Vetor (Shapefile o
  print("CRS do Raster: {}, CRS do Vetor {}".format(train_df.crs, src.crs))
 
 ```
+
+<br/><br/>
 
 #### 4. Gerar a Máscara Binária
 
@@ -126,6 +131,7 @@ plt.figure(figsize=(15,15))
 plt.imshow(mask)
 
 ```
+<br/><br/>
 
 #### 5. Salvar
 
@@ -140,6 +146,7 @@ with rasterio.open(arquivo_salvar, 'w', **bin_mask_meta) as dst:
     dst.write(mask * 255, 1)
 
 ```
+<br/><br/>
 
 #### 6. Definir uma Função que gera máscaras binárias.
 
@@ -215,6 +222,8 @@ def generate_mask(raster_path, shape_path, output_path, file_name):
 
 
 ```
+
+<br/><br/>
 
 #### Referências
 
