@@ -12,13 +12,13 @@ imagens do Satélite RapidEye.
 
 ### Workflow
 
-- 0. Importar as Bibliotecas;
-- 1. Carregar a Imagem .tif;
-- 2. Carregar o Shapefile ou GeoJson;
-- 3. Verificar se os Sistemas de Cordenadas de Referência (CRS) são os mesmos;
-- 4. Gerar a Máscara Binária;
-- 5. Salvar;
-- 5. Definir uma Função que gera máscaras binárias.
+- 0 Importar as Bibliotecas;
+- 1 Carregar a Imagem .tif;
+- 2 Carregar o Shapefile ou GeoJson;
+- 3 Verificar se os Sistemas de Cordenadas de Referência (CRS) são os mesmos;
+- 4 Gerar a Máscara Binária;
+- 5 Salvar;
+- 6 Definir uma Função que gera máscaras binárias.
 
 #### 0. Importar as bibliotecas
 
@@ -77,6 +77,46 @@ Caso os Valores sejam diferentes, é necessário reprojetar o Vetor (Shapefile o
 ```
 
 #### 4. Gerar a Máscara Binária;
+
+```python
+ 
+ #Função que 
+ def poly_from_utm(polygon, transform):
+    poly_pts = []
+    
+    # Gerar um polígono a partir de multipolígonos.
+    poly = cascaded_union(polygon)
+    for i in np.array(poly.exterior.coords):
+        
+        # Transformar os polígonos para o CRS da imagem, utilizando os metadados do raster.
+        poly_pts.append(~transform * tuple(i))
+        
+    # Gerar um objeto de polígono
+    new_poly = Polygon(poly_pts)
+    return new_poly
+
+# Gerar a máscara binária
+
+poly_shp = []
+im_size = (src.meta['height'], src.meta['width'])
+for num, row in train_df.iterrows():
+    if row['geometry'].geom_type == 'Polygon':
+        poly = poly_from_utm(row['geometry'], src.meta['transform'])
+        poly_shp.append(poly)
+    else:
+        for p in row['geometry']:
+            poly = poly_from_utm(p, src.meta['transform'])
+            poly_shp.append(poly)
+
+mask = rasterize(shapes=poly_shp,
+                 out_shape=im_size)
+
+# Plotar a máscara gerada
+
+plt.figure(figsize=(15,15))
+plt.imshow(mask)
+
+```
 
 
 
