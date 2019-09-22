@@ -1,11 +1,15 @@
 ---
 layout: post
-title: Tutorial - Como Gerar Máscaras (Raster) Binário com Python
+title: Tutorial - Como Gerar Máscara (Raster) Binária com Python
 subtitle: Convertendo Shapefile e GeoJson Em Raster Binário 
 tags: [AI, Python, rms, Sensoriamento Remoto, Máscara Binária, Tutorial]
 ---
 
 Este tutorial tem como intuito mostrar como gerar um raster binário, muito utilizado em problemas de segmentação semântica, com o python. As máscaras binárias posseum o valor de 0 para o background e 1 para a classe de interesse.
+
+
+&nbsp;
+&nbsp;
 
 ### Workflow
 
@@ -17,6 +21,9 @@ Este tutorial tem como intuito mostrar como gerar um raster binário, muito util
 - 4 -  Gerar a Máscara Binária;
 - 5 -  Salvar;
 - 6 -  Definir uma Função que gera máscaras binárias.
+
+&nbsp;
+&nbsp;
 
 
 #### 0. Importar as bibliotecas
@@ -42,6 +49,8 @@ import cv2
 import matplotlib.pyplot as plt
 
 ```
+&nbsp;
+&nbsp;
 
 #### 1. Carregar a Imagem .tif
 
@@ -58,7 +67,8 @@ with rasterio.open(raster_path, "r") as src:
 
 ```
 
-
+&nbsp;
+&nbsp;
 
 #### 2. Carregar o Shapefile ou GeoJson 
 
@@ -74,7 +84,8 @@ train_df = gpd.read_file(shape_path)
 
 ```
 
-
+&nbsp;
+&nbsp;
 
 #### 3. Verificar se os Sistemas de Cordenadas de Referência (CRS) são os mesmos;
 
@@ -87,7 +98,8 @@ Caso os Valores sejam diferentes, é necessário reprojetar o Vetor (Shapefile o
 
 ```
 
-
+&nbsp;
+&nbsp;
 
 #### 4. Gerar a Máscara Binária
 
@@ -134,7 +146,8 @@ plt.figure(figsize=(15,15))
 plt.imshow(mask)
 
 ```
-
+&nbsp;
+&nbsp;
 
 
 #### 5. Salvar
@@ -153,7 +166,8 @@ with rasterio.open(arquivo_salvar, 'w', **bin_mask_meta) as dst:
 
 ```
 
-
+&nbsp;
+&nbsp;
 
 #### 6. Definir uma Função que gera máscaras binárias.
 
@@ -231,6 +245,8 @@ def generate_mask(raster_path, shape_path, output_path, file_name):
 
 ```
 
+&nbsp;
+&nbsp;
 
 
 #### Referências
@@ -238,6 +254,9 @@ def generate_mask(raster_path, shape_path, output_path, file_name):
 - <https://medium.com/datadriveninvestor/preparing-aerial-imagery-for-crop-classification-ce05d3601c68>
 
 - <https://rasterio.readthedocs.io/en/stable/api/rasterio.mask.html>
+
+&nbsp;
+&nbsp;
 
 
 
