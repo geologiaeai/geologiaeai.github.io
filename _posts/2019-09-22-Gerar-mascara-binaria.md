@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tutorial - Como Gerar Máscara (Raster) Binária com Python
+title: Tutorial - Como Gerar Máscara Binária com Python
 subtitle: Convertendo Shapefile e GeoJson Em Raster Binário 
 tags: [AI, Python, rms, Sensoriamento Remoto, Máscara Binária, Tutorial]
 ---
@@ -15,13 +15,13 @@ Este tutorial tem como intuito mostrar como gerar um raster binário, muito util
 ### Workflow
 
 
-- 0 -   Importar as Bibliotecas;
+- 0 - [0. Importar as Bibliotecas;](#### 0. Importar as bibliotecas) 
 - 1 -  Carregar a Imagem .tif;
 - 2 -  Carregar o Shapefile ou GeoJson;
 - 3 -  Verificar se os Sistemas de Cordenadas de Referência (CRS) são os mesmos;
 - 4 -  Gerar a Máscara Binária;
 - 5 -  Salvar;
-- 6 -  Definir uma Função que gera máscaras binárias.
+- 6 -  Definir uma Função que gera Máscaras Binárias.
 
 &nbsp;
 
