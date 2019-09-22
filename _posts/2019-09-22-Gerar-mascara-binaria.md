@@ -9,15 +9,19 @@ Este tutorial tem como intuito mostrar como gerar um raster binário, muito util
 
 ### Workflow
 
-- 0 Importar as Bibliotecas;
-- 1 Carregar a Imagem .tif;
-- 2 Carregar o Shapefile ou GeoJson;
-- 3 Verificar se os Sistemas de Cordenadas de Referência (CRS) são os mesmos;
-- 4 Gerar a Máscara Binária;
-- 5 Salvar;
-- 6 Definir uma Função que gera máscaras binárias.
+
+- 0.  Importar as Bibliotecas;
+- 1.  Carregar a Imagem .tif;
+- 2.  Carregar o Shapefile ou GeoJson;
+- 3.  Verificar se os Sistemas de Cordenadas de Referência (CRS) são os mesmos;
+- 4.  Gerar a Máscara Binária;
+- 5.  Salvar;
+- 6.  Definir uma Função que gera máscaras binárias.
+
 
 #### 0. Importar as bibliotecas
+
+
 
 ``` python
 
@@ -41,6 +45,8 @@ import matplotlib.pyplot as plt
 
 #### 1. Carregar a Imagem .tif
 
+
+
 Para carregar a imagem .tif defina a variável raster_path como o caminho para a imagem sobre a qual será gerada a máscara binária.
 
 ``` python
@@ -53,6 +59,8 @@ with rasterio.open(raster_path, "r") as src:
 ```
 
 #### 2. Carregar o Shapefile ou GeoJson 
+
+
 
 Para carregar o arquivo shapefile (.shp) ou GeoJson (.geojson) defina a variável shape_path com o local onde está localizado o arquivo.
 
@@ -76,6 +84,8 @@ Caso os Valores sejam diferentes, é necessário reprojetar o Vetor (Shapefile o
 ```
 
 #### 4. Gerar a Máscara Binária
+
+
 
 Para gerar a máscara binária basta rodar o código abaixo. Ao final, a máscara gerada será plotada.
 
@@ -121,6 +131,8 @@ plt.imshow(mask)
 
 #### 5. Salvar
 
+
+
 Para salvar, deve-se converter o arquivo para 'uint16' e definir o local que será salvo o arquivo.
 
 ```python
@@ -134,6 +146,8 @@ with rasterio.open(arquivo_salvar, 'w', **bin_mask_meta) as dst:
 ```
 
 #### 6. Definir uma Função que gera máscaras binárias.
+
+
 
 A função generate_mask(), tem como entrada os parâmentros abaixo:
 
@@ -210,9 +224,9 @@ def generate_mask(raster_path, shape_path, output_path, file_name):
 
 #### Referências
 
-- https://medium.com/datadriveninvestor/preparing-aerial-imagery-for-crop-classification-ce05d3601c68
+- (https://medium.com/datadriveninvestor/preparing-aerial-imagery-for-crop-classification-ce05d3601c68)
 
-- https://rasterio.readthedocs.io/en/stable/api/rasterio.mask.html
+- (https://rasterio.readthedocs.io/en/stable/api/rasterio.mask.html)
 
 
 
