@@ -199,7 +199,7 @@ def generate_mask(raster_path, shape_path, output_path, file_name):
     
     #Verificar se o CRS é o mesmo
     if train_df.crs != src.crs:
-        print(" Raster crs: {} and Vector crs: {}.\n Converta para o mesmo Sistema de Coordenadas de Referência!".format(src.crs,train_df.crs))
+        print(" crs do Raster : {} e Crs do Vetor : {}.\n Converta para o mesmo Sistema de Coordenadas de Referência!".format(src.crs,train_df.crs))
         
         
     #Função para gerar a máscara
