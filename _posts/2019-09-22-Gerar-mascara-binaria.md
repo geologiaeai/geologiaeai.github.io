@@ -195,7 +195,6 @@ def generate_mask(raster_path, shape_path, output_path, file_name):
         raster_meta = src.meta
     
     #Carregar o shapefile ou GeoJson
-    #shape_path = folder where the shapefile is located
     train_df = gpd.read_file(shape_path)
     
     #Verificar se o CRS é o mesmo
