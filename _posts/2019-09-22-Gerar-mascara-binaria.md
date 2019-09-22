@@ -7,6 +7,7 @@ tags: [AI, Python, rms, Sensoriamento Remoto, Máscara Binária, Tutorial]
 
 Este tutorial tem como intuito mostrar como gerar um raster binário, muito utilizado em problemas de segmentação semântica, com o python. As máscaras binárias posseum o valor de 0 para o background e 1 para a classe de interesse.
 
+
 ### Workflow
 
 
@@ -41,7 +42,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 ```
-<br/><br/>
+&nbsp;
 
 #### 1. Carregar a Imagem .tif
 
@@ -57,7 +58,7 @@ with rasterio.open(raster_path, "r") as src:
 
 ```
 
-<br/><br/>
+&nbsp;
 
 #### 2. Carregar o Shapefile ou GeoJson 
 
@@ -85,7 +86,7 @@ Caso os Valores sejam diferentes, é necessário reprojetar o Vetor (Shapefile o
 
 ```
 
-<br/><br/>
+&nbsp;
 
 #### 4. Gerar a Máscara Binária
 
@@ -131,7 +132,7 @@ plt.figure(figsize=(15,15))
 plt.imshow(mask)
 
 ```
-<br/><br/>
+&nbsp;
 
 #### 5. Salvar
 
@@ -146,7 +147,7 @@ with rasterio.open(arquivo_salvar, 'w', **bin_mask_meta) as dst:
     dst.write(mask * 255, 1)
 
 ```
-<br/><br/>
+&nbsp;
 
 #### 6. Definir uma Função que gera máscaras binárias.
 
@@ -223,7 +224,7 @@ def generate_mask(raster_path, shape_path, output_path, file_name):
 
 ```
 
-<br/><br/>
+&nbsp;
 
 #### Referências
 
