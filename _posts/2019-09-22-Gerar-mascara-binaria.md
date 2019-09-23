@@ -5,7 +5,7 @@ subtitle: Convertendo Shapefile e GeoJson Em Raster Binário
 tags: [AI, Python, rms, Sensoriamento Remoto, Máscara Binária, Tutorial]
 ---
 
-Este tutorial tem como intuito mostrar como gerar um raster binário, muito utilizado em problemas de segmentação semântica, com o python. As máscaras binárias possuem o valor de 0 para o background e 1 para a classe de interesse.
+Este tutorial tem como intuito mostrar como gerar um raster binário, muito utilizado em problemas de segmentação semântica, com o python. As máscaras binárias possuem o valor de 0 para o background e 255 para a classe de interesse.
 
 
 ![](/img/binary_mask.gif)
