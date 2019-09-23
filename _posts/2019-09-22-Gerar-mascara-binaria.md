@@ -85,7 +85,7 @@ train_df = gpd.read_file(shape_path)
 
 <br/><br/>
 
-#### 3. Verificar se os Sistemas de Cordenadas de Referência (CRS) são os mesmos;
+#### 3. Verificar se os Sistemas de Cordenadas de Referência (CRS) são os mesmos
 
 
 Caso os Valores sejam diferentes, é necessário reprojetar o Vetor (Shapefile ou GeoJson) ou a imagem (raster). Para isso, pode-se utilizar o software QGIS.  
@@ -158,7 +158,7 @@ with rasterio.open(arquivo_salvar, 'w', **bin_mask_meta) as dst:
 ```
 &nbsp;
 
-#### 6. Definir uma Função que gera máscaras binárias.
+#### 6. Definir uma Função que gera máscaras binárias
 
 
 A função generate_mask(), tem como entrada os parâmentros abaixo:
