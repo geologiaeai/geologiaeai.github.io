@@ -213,7 +213,7 @@ class _MyAppState extends State<MyApp> {
   }
 ```
 
-Agora passaremos esta função no atributo **onTap** no widget MapOptions(), adicionado na etapa anterior. Veja que agora ao clicar no mapa, as coordenadas lat e long aparecem no Android Studio. 
+Agora passaremos esta função no atributo **onTap** no widget MapOptions(), adicionado na etapa anterior. Veja que agora ao clicar no mapa, as coordenadas lat e long aparecem no console do Android Studio. 
 
 ```
 MapOptions(
@@ -229,6 +229,53 @@ MapOptions(
 
 
 ![](/img/post_flutter_markers/ontap.gif)
+
+
+Para fazer com que os marcadores aparecem ao clicar na tela, é preciso criar uma nova variável **markers** que definirá o tipo do marcador adicionado e suas dimensões. Esta variável deve ser adicionada dentro da função build.
+
+```
+Widget build(BuildContext context) {
+ var markers = tappedPoints.map((latlng) {
+      return Marker(
+        // dimensao dos marcadores
+        width: 80.0,
+        height: 80.0,
+        // coordenadas do marcadores.
+        point: latlng,
+        builder: (ctx) => Container(
+          child: Icon(
+            // Icone do marcador
+            Icons.pin_drop,
+            color: Colors.red,
+          ),
+        ),
+      );
+    }).toList();
+   ```
+   
+O valor de latlng da lista **tappedPoints** será utilizado como dicionário (map) para os marcadores. A função de mapeamento retornará um widget do tipo Marker o qual permite difinir a largura (width), altura (height) e coordenada (point) como atributos. Além disso, no atributo builder é definido o widget que aparecerá no mapa. Aqui será retornado um Widget Container que têm como filho um ícone (*pin_drop*) de cor vermelha.
+
+Para adicionar os ícones ao mapa, adicione na lista de layers do widget FlutterMap(), o widget, MarkerLayerOptions(), com o atributo **markers** apontando para a varíavel markers criada anteriormente.
+
+
+```
+layers: [
+            // Url do mapa.
+            TileLayerOptions(
+              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            ),
+            // Marcadores
+            MarkerLayerOptions(markers: markers)
+          ],
+
+```
+
+Agora ao clicar na tela aparecem pins de cor vermelha.
+
+![](/img/post_flutter_markers/pins.gif)
+
+
+
 
 
 
