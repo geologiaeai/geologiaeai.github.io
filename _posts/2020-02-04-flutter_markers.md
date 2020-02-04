@@ -5,7 +5,7 @@ subtitle:
 tags: [flutter, GIS, Tutorial]
 ---
 
-Neste post mostrarei como desenvolver um aplicativo de SIG com o Flutter que permite adicionar pontos em um mapa e obter sua coodernada.
+Neste post mostrarei como desenvolver um aplicativo de SIG utilizando o Flutter. O aplicativo permite adicionar pontos em um mapa e obter suas coodernadas.
 
  
 ![](/img/post_flutter_markers/marker_demo.gif)
