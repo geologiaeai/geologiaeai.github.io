@@ -18,10 +18,14 @@ a comunidade de desenvolvedores e bibliotecas diponíveis estão aumentando rapi
 o Flutter para desenvolver seus aplicativos. O lançamento do Fuchsia, novo sistema operacional da Google, deve aumentar ainda mais o uso deste SDK,
 já que os aplicativos serão desenvolvidos com base no Flutter. Portanto, a tendência é que o Flutter seja cada vez mais utilizado no mercado.
 
-Para desenvolver este aplicativo é necessário que você já tenha o Flutter instalado em sua máquina e que saiba conceitos básicos da Liguagem Dart, utilizada pelo Flutter, e de sistema de informações geográficas (SIG).O Android Studio é a IDE utilizada neste tutorial. 
+Para desenvolver este aplicativo é necessário que você já tenha o Flutter instalado em sua máquina e que saiba conceitos básicos da Liguagem Dart, utilizada pelo Flutter, e de sistema de informações geográficas (SIG).O Android Studio é a IDE utilizada neste tutorial.
+
+
 
 
 ### Workflow
+
+[*Codigo-Completo*](#codigo-completo)(~~Para os apressadinhos!~~)
 
 - [0. Criar um novo projeto Flutter](#0-criar-um-novo-projeto-flutter) 
 
@@ -31,9 +35,11 @@ Para desenvolver este aplicativo é necessário que você já tenha o Flutter in
 
 - [3. Desenvolver a UI](#3-desenvolver-a-UI) 
 
-- [4. Adicionar o mapa](#4-Adicionar-o-mapa) 
+- [4. Adicionar o mapa](#4-adicionar-o-mapa) 
 
-- [5. Adicionar os marcadores no mapa](#5-Adicionar-os-marcadores-no-mapa) 
+- [5. Adicionar os marcadores no mapa](#5-adicionar-os-marcadores-no-mapa) 
+
+- [6. Mostrar SnackBar com as coordenadas](#6-mostrar-snackbar-com-as-coordenadas) 
 
 &nbsp;
 
@@ -273,6 +279,129 @@ layers: [
 Agora ao clicar na tela aparecem pins de cor vermelha.
 
 ![](/img/post_flutter_markers/pins.gif)
+
+
+#### 6. Mostrar SnackBar com as coordenadas
+
+Para finalizar, iremos colocar um widget do tipo GestureDetector() nos ícones adicionados ao mapa para mostrar a coordenadas dos pins adicionados. Assim, envolva o widget Container() com o widget GestureDetector(). No atributo onTap, vamos adicionar um SnackBar com as coordenadas de cada ponto.
+
+```
+var markers = tappedPoints.map((latlng) {
+      return Marker(
+        width: 80.0,
+        height: 80.0,
+        point: latlng,
+        builder: (ctx) => GestureDetector(
+          onTap: () {
+            // Mostrar uma SnackBar quando clicar em um marcador
+            Scaffold.of(ctx).showSnackBar(SnackBar(
+                content: Text("Latitude =" +
+                    latlng.latitude.toString() +
+                    " :: Longitude = " +
+                    latlng.longitude.toString())));
+          },
+          child: Container(
+            child: Icon(
+              // Icone do marcador
+              Icons.pin_drop,
+              color: Colors.red,
+            ),
+          ),
+        ),
+      );
+    }).toList();
+```
+
+Pronto, agora ao clicar nos pins do mapa suas coordenadas aparecem na parte inferior da tela e o aplicativo está pronto.
+
+![](/img/post_flutter_markers/app_final.gif)
+
+
+#### Código Completo
+```
+import 'package:flutter/material.dart';
+
+// Importar bibliotecas
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong/latlong.dart';
+
+void main() => runApp(MyApp());
+
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  // Lista de pontos adicionados ao clicar na tela <LatLng>
+  List<LatLng> tappedPoints = [];
+
+// funcao que atualiza o estado do mapa e salva a coordenada na lista tappedPoints.
+  void _handleTap(LatLng latlng) {
+    setState(() {
+      print(latlng);
+      tappedPoints.add(latlng);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var markers = tappedPoints.map((latlng) {
+      return Marker(
+        // dimensao dos marcadores
+        width: 80.0,
+        height: 80.0,
+        // coordenadas do marcadores.
+        point: latlng,
+        builder: (ctx) => GestureDetector(
+          onTap: () {
+            // Mostrar uma SnackBar quando clicar em um marcador
+            Scaffold.of(ctx).showSnackBar(SnackBar(
+                content: Text("Latitude =" +
+                    latlng.latitude.toString() +
+                    " :: Longitude = " +
+                    latlng.longitude.toString())));
+          },
+          child: Container(
+            child: Icon(
+              // Icone do marcador
+              Icons.pin_drop,
+              color: Colors.red,
+            ),
+          ),
+        ),
+      );
+    }).toList();
+
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Flutter - Mapa"),
+        ),
+            body: FlutterMap(
+              options: MapOptions(
+
+                // Coordenada central do mapa.
+                  center: LatLng(-15.799862, -47.864195),
+                  // Quantidade de zoom do mapa.
+                  zoom: 17,
+              onTap: _handleTap),
+              layers: [
+                // Url do mapa.
+                TileLayerOptions(
+                  urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                ),
+                MarkerLayerOptions(markers: markers),
+              ],
+            ),
+      ),
+    );
+  }
+}
+
+
+```
 
 
 
