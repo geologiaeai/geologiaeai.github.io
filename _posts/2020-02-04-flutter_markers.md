@@ -25,7 +25,7 @@ Para desenvolver este aplicativo é necessário que você já tenha o Flutter in
 
 - [0. Criar um novo projeto Flutter](#0-criar-um-novo-projeto-flutter) 
 
-- [0. Adicionar as bibliotecas](#0-adicionar-as-bibliotecas) 
+- [1. Adicionar as bibliotecas](#0-adicionar-as-bibliotecas) 
 
 &nbsp;
 
