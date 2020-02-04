@@ -13,19 +13,19 @@ Neste post mostrarei como desenvolver um aplicativo de SIG com o Flutter que per
 
 
 O Flutter é um SDK desenvolvido pela Google que permite o desenvolvimento de aplicativos para multiplataformas, isto é, com o mesmo
-código é possível desenvolver aplicativos para android, IOS, web e desktop. Este framework ainda não é muito utilizada no mercado, porém,
+código é possível desenvolver aplicativos para android, IOS, web e desktop. Este framework ainda não é muito utilizado no mercado, porém,
 a comunidade de desenvolvedores e bibliotecas diponíveis estão aumentando rapidamente, além disso, startups como a NuBank já utilizam
 o Flutter para desenvolver seus aplicativos. O lançamento do Fuchsia, novo sistema operacional da Google, deve aumentar ainda mais o uso deste SDK,
 já que os aplicativos serão desenvolvidos com base no Flutter. Portanto, a tendência é que o Flutter seja cada vez mais utilizado no mercado.
 
-Para desenvolver este aplicativo é necessário que você já tenha o Flutter instalado em sua máquina e que saiba conceitos básicos da Liguagem Dart, utilizada pelo Flutter, e de sistema de informações geográficas (SIG).O Android Studio é a IDE utilizada neste tutorial.
+Para desenvolver este aplicativo é necessário que você já tenha o Flutter instalado em sua máquina e que saiba conceitos básicos da Liguagem Dart, utilizada pelo Flutter, e de sistema de informações geográficas (SIG). O Android Studio é a IDE utilizada neste tutorial.
 
 
 
 
 ### Workflow
 
-- [*Código-Completo*](#código-completo)(~~Para os apressadinhos!~~)
+- [*Código-Completo*] (#código-completo)(~~Para os apressadinhos!~~)
 
 - [0. Criar um novo projeto Flutter](#0-criar-um-novo-projeto-flutter) 
 
@@ -39,7 +39,7 @@ Para desenvolver este aplicativo é necessário que você já tenha o Flutter in
 
 - [5. Adicionar os marcadores no mapa](#5-adicionar-os-marcadores-no-mapa) 
 
-- [6. Mostrar SnackBar com as coordenadas](#6-mostrar-snackbar-com-as-coordenadas) 
+- [6. Mostrar a SnackBar com as coordenadas](#6-mostrar-snackbar-com-as-coordenadas) 
 
 &nbsp;
 
@@ -59,7 +59,7 @@ Utilizaremos as bibliotecas flutter_map e latlong:
 - [latlong](<https://pub.dev/packages/latlong>)
 
 
-Vá ao arquivo *pubspec.yaml* e adicione o código abaixo:
+Vá ao arquivo *pubspec.yaml* e adicione as seguintes bibliotecas como dependências:
 
 ```flutter
 flutter_map: ^0.8.2
@@ -120,7 +120,7 @@ class _MyAppState extends State<MyApp> {
 
 ```
 
-A classe MyApp é do tipo statefulWidget o que permite aos widgets dispostos na tela serem atualizados futuramente. O widget scaffold foi adicionado no atributo **home** do widget MaterialApp. A parte final do código adiciona a barra superior do aplicativo, conhecida como AppBar, e o título do aplicativo.
+A classe MyApp é do tipo statefulWidget o que permite aos widgets dispostos na tela serem atualizados. O widget scaffold foi adicionado no atributo **home** do widget MaterialApp. A parte final do código adiciona a barra superior do aplicativo, conhecida como AppBar, e o título do aplicativo.
 
 ```flutter
 // Habilita o uso do material design no aplicativo.
@@ -312,7 +312,7 @@ var markers = tappedPoints.map((latlng) {
     }).toList();
 ```
 
-Pronto, agora ao clicar nos pins do mapa suas coordenadas aparecem na parte inferior da tela e o aplicativo está pronto.
+Pronto, agora ao clicar nos pins do mapa suas coordenadas aparecem na parte inferior da tela.
 
 ![](/img/post_flutter_markers/app_final.gif)
 
