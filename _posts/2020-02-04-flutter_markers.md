@@ -25,6 +25,8 @@ Para desenvolver este aplicativo é necessário que você já tenha o Flutter in
 
 - [0. Criar um novo projeto Flutter](#0-criar-um-novo-projeto-flutter) 
 
+- [0. Adicionar as bibliotecas](#0-adicionar-as-bibliotecas) 
+
 &nbsp;
 
 #### 0. Criar um novo projeto flutter
@@ -32,5 +34,26 @@ Para desenvolver este aplicativo é necessário que você já tenha o Flutter in
 Abra o Android Studio e crie um novo projeto do Flutter, escolha o nome e o local em qual o projeto será salvo.
 
 ![](/img/post_flutter_markers/new_project.png)
+
+
+#### 1. Adicionar as bibliotecas
+
+Utilizaremos as bibliotecas flutter_map e latlong
+
+- [Flutter_map](<https://pub.dev/packages/flutter_map>)
+
+-[latlong](<https://pub.dev/packages/latlong>)
+
+
+Vá ao arquivo *pubspec.yaml* e adicione o código abaixo:
+
+```flutter
+flutter_map: ^0.8.2
+latlong: ^0.6.1
+```
+
+
+
+
 
 
