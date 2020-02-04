@@ -25,7 +25,7 @@ Para desenvolver este aplicativo é necessário que você já tenha o Flutter in
 
 ### Workflow
 
-- [*Código-Completo*](#código-completo)(~~Para os apressadinhos!~~)
+- [*Código Completo*](#código-completo)(~~Para os apressadinhos!~~)
 
 - [0. Criar um novo projeto Flutter](#0-criar-um-novo-projeto-flutter) 
 
@@ -237,7 +237,7 @@ MapOptions(
 ![](/img/post_flutter_markers/ontap.gif)
 
 
-Para fazer com que os marcadores aparecem ao clicar na tela, é preciso criar uma nova variável **markers** que definirá o tipo do marcador adicionado e suas dimensões. Esta variável deve ser adicionada dentro da função build.
+Para fazer os marcadores aparecerem ao clicar na tela, é preciso criar uma nova variável **markers** que definirá o tipo do marcador adicionado e suas dimensões. Esta variável deve ser adicionada dentro da função build.
 
 ```
 Widget build(BuildContext context) {
