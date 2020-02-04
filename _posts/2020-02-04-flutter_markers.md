@@ -31,7 +31,9 @@ Para desenvolver este aplicativo é necessário que você já tenha o Flutter in
 
 - [3. Desenvolver a UI](#3-desenvolver-a-UI) 
 
-- [3. Adicionar o mapa](#4-Adicionar-o-mapa) 
+- [4. Adicionar o mapa](#4-Adicionar-o-mapa) 
+
+- [5. Adicionar os marcadores no mapa](#5-Adicionar-os-marcadores-no-mapa) 
 
 &nbsp;
 
@@ -48,7 +50,7 @@ Utilizaremos as bibliotecas flutter_map e latlong:
 
 - [Flutter_map](<https://pub.dev/packages/flutter_map>)
 
--[latlong](<https://pub.dev/packages/latlong>)
+- [latlong](<https://pub.dev/packages/latlong>)
 
 
 Vá ao arquivo *pubspec.yaml* e adicione o código abaixo:
@@ -191,6 +193,23 @@ Agora é possível ver um mapa no aplicativo que está centralizado no Congresso
 
 ![](/img/post_flutter_markers/mapa_app.gif)
 
+#### 5. Adicionar os marcadores no mapa
 
+Agora iremos adicionar marcadores ao clicar no mapa. Para isso, iremos criar uma varíavel chamada **tappedPoints** a qual receberá uma lista de pontos do tipo LatLng. O LatLng é o tipo de valor que é passado pela biblioteca ao interagir com o mapa. O dado apresenta a seguinte forma: LatLng(latitude:-15.798386, longitude:-47.864817). Além desta variável, precisamos também de uma função a qual adiciona os pontos a esta lista. Assim, criaremos também a função \_handleTap. Esta função tem como parâmentro de entrada valores do tipo LatLng e adiciona os pontos a lista tappedPoints quando houver um clique na tela. A função *setState()* atualiza o aplicativo para mostrar os marcadores na tela.
 
+Logo abaixo de \_MyAppState adicione esta função e a variável.
+
+```
+class _MyAppState extends State<MyApp> {
+  // Lista de pontos adicionados ao clicar na tela <LatLng>
+  List<LatLng> tappedPoints = [];
+
+// funcao que atualiza o estado do mapa e salva a coordenada na lista tappedPoints.
+  void _handleTap(LatLng latlng) {
+    setState(() {
+      tappedPoints.add(latlng);
+    });
+  }
+```
+A função \_handleTap tem como parâmentro de entrada valores do tipo LatLng
 
