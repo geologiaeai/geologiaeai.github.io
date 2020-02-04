@@ -5,18 +5,32 @@ subtitle:
 tags: [flutter, GIS, Tutorial]
 ---
 
-Neste post mostrarei como desenvolver um aplicativo de mapa com o Flutter o qual permite adicionar pontos no mapa ao clicar na tela
-e obter sua coordenada.
+Neste post mostrarei como desenvolver um aplicativo de SIG com o Flutter que permite adicionar pontos em um mapa e obter sua coodernada.
 
-<p align="center">
  
 ![](/img/post_flutter_markers/marker_demo.gif)
 
-</p>
 
 
 O Flutter é um SDK desenvolvido pela Google que permite o desenvolvimento de aplicativos para multiplataformas, isto é, com o mesmo
 código é possível desenvolver aplicativos para android, IOS, web e desktop. Este framework ainda não é muito utilizada no mercado, porém,
-a comunidade de desenvolvedores e bibliotecas diponíveis estão cada vez maiores e melhores, além disso, startups como a NuBank já utilizam
+a comunidade de desenvolvedores e bibliotecas diponíveis estão aumentando rapidamente, além disso, startups como a NuBank já utilizam
 o Flutter para desenvolver seus aplicativos. O lançamento do Fuchsia, novo sistema operacional da Google, deve aumentar ainda mais o uso deste SDK,
 já que os aplicativos serão desenvolvidos com base no Flutter. Portanto, a tendência é que o Flutter seja cada vez mais utilizado no mercado.
+
+Para desenvolver este aplicativo é necessário que você já tenha o Flutter instalado em sua máquina e que saiba conceitos básicos da Liguagem Dart, utilizada pelo Flutter, e de sistema de informações geográficas (SIG).O Android Studio é a IDE utilizada neste tutorial. 
+
+
+### Workflow
+
+- [0. Criar um novo projeto Flutter](#0-criar-um-novo-projeto-flutter) 
+
+&nbsp;
+
+#### 0. Criar um novo projeto flutter
+
+Abra o Android Studio e crie um novo projeto do Flutter, escolha o nome e o local em qual o projeto será salvo.
+
+![](/img/post_flutter_markers/new_project.png)
+
+
