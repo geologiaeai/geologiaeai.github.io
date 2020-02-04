@@ -205,11 +205,30 @@ class _MyAppState extends State<MyApp> {
   List<LatLng> tappedPoints = [];
 
 // funcao que atualiza o estado do mapa e salva a coordenada na lista tappedPoints.
-  void _handleTap(LatLng latlng) {
+   void _handleTap(LatLng latlng) {
     setState(() {
+      print(latlng);
       tappedPoints.add(latlng);
     });
   }
 ```
-A função \_handleTap tem como parâmentro de entrada valores do tipo LatLng
+
+Agora passaremos esta função no atributo **onTap** no widget MapOptions(), adicionado na etapa anterior. Veja que agora ao clicar no mapa, as coordenadas lat e long aparecem no Android Studio. 
+
+```
+MapOptions(
+
+              // Coordenada central do mapa.
+              center: LatLng(-15.799862, -47.864195),
+              // Quantidade de zoom do mapa.
+              zoom: 17,
+              onTap: _handleTap
+          ),
+
+```
+
+
+![](/img/post_flutter_markers/ontap.gif)
+
+
 
