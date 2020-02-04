@@ -8,8 +8,9 @@ tags: [flutter, GIS, Tutorial]
 Neste post mostrarei como desenvolver um aplicativo de mapa com o Flutter o qual permite adicionar pontos no mapa ao clicar na tela
 e obter sua coordenada.
 
-
+<p align="center">
 ![](/img/post_flutter_markers/marker_demo.gif)
+ </p>
 
 
 O Flutter é um SDK desenvolvido pela Google que permite o desenvolvimento de aplicativos para multiplataformas, isto é, com o mesmo
