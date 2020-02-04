@@ -120,7 +120,7 @@ class _MyAppState extends State<MyApp> {
 
 ```
 
-A classe MyApp é do tipo statefulWidget o que permite aos widgets dispostos na tela serem atualizados. O widget scaffold foi adicionado no atributo **home** do widget MaterialApp. A parte final do código adiciona a barra superior do aplicativo, conhecida como AppBar, e o título do aplicativo.
+A classe MyApp é do tipo statefulWidget o que permite aos widgets dispostos na tela serem atualizados. O widget scaffold foi adicionado no argumento **home** do widget MaterialApp. A parte final do código adiciona a barra superior do aplicativo, conhecida como AppBar, e o título do aplicativo.
 
 ```flutter
 // Habilita o uso do material design no aplicativo.
@@ -145,7 +145,7 @@ Ao rodar o aplicativo você obterá o seguinte resultado:
 
 #### 4. Adicionar o Mapa
 
-Agora iremos adicionar o mapa ao nosso aplicativo utilizando as bibliotecas importadas anteriormente. Para isso, no atributo **body**, do widget scaffold, adicione o widget FlutterMap(). Este widget apresenta **options** e **layers** como atributos. O atributo **options** espera um widget do tipo MapOptions e o atributo layers espera uma lista do tipo LayerOptions. O código abaixo irá adicionar o mapa em nosso aplicativo.
+Agora iremos adicionar o mapa ao nosso aplicativo utilizando as bibliotecas importadas anteriormente. Para isso, no argumento **body**, do widget scaffold, adicione o widget FlutterMap(). Este widget apresenta **options** e **layers** como argumentos. O argumento **options** espera um widget do tipo MapOptions e o argumento layers espera uma lista do tipo LayerOptions. O código abaixo irá adicionar o mapa em nosso aplicativo.
 
 
 ```flutter
@@ -172,7 +172,7 @@ Scaffold(
 
 ```
 
-O widget mapOptions() foi passado como atributo **options** do widget FlutterMap() para estabelecer a coordenada central e quantidade de zoom que aparecerá ao iniciar mapa:
+O widget mapOptions() foi passado como o argumento **options** do widget FlutterMap(), para estabelecer a coordenada central e quantidade de zoom que aparecerá ao iniciar mapa:
 
 ```
 MapOptions(
@@ -183,7 +183,7 @@ MapOptions(
 
 ```
 
-Já no atributo layers, passamos uma lista que contém o widget TileLayerOptions(). Este widget recebe um url, no atributo **urltemplate**, que carrega o mapa no aplicativo.
+Já no argumento layers, passamos uma lista que contém o widget TileLayerOptions(). Este widget recebe um url, no argumento **urltemplate**, que carrega o mapa no aplicativo.
 
 ```
 [
@@ -219,7 +219,7 @@ class _MyAppState extends State<MyApp> {
   }
 ```
 
-Agora passaremos esta função no atributo **onTap** no widget MapOptions(), adicionado na etapa anterior. Veja que agora ao clicar no mapa, as coordenadas lat e long aparecem no console do Android Studio. 
+Agora passaremos esta função no argumento **onTap** no widget MapOptions(), adicionado na etapa anterior. Veja que agora ao clicar no mapa, as coordenadas lat e long aparecem no console do Android Studio. 
 
 ```
 MapOptions(
@@ -259,9 +259,9 @@ Widget build(BuildContext context) {
     }).toList();
    ```
    
-O valor de latlng da lista **tappedPoints** será utilizado como dicionário (map) para os marcadores. A função de mapeamento retornará um widget do tipo Marker o qual permite difinir a largura (width), altura (height) e coordenada (point) como atributos. Além disso, no atributo builder é definido o widget que aparecerá no mapa. Aqui será retornado um Widget Container que têm como filho um ícone (*pin_drop*) de cor vermelha.
+O valor de latlng da lista **tappedPoints** será utilizado como dicionário (map) para os marcadores. A função de mapeamento retornará um widget do tipo Marker o qual permite difinir a largura (width), altura (height) e coordenada (point) como argumentos. Além disso, no argumento builder é definido o widget que aparecerá no mapa. Aqui será retornado um Widget Container que têm como filho um ícone (*pin_drop*) de cor vermelha.
 
-Para adicionar os ícones ao mapa, adicione na lista de layers do widget FlutterMap(), o widget MarkerLayerOptions(), com o atributo **markers** apontando para a varíavel markers criada anteriormente.
+Para adicionar os ícones ao mapa, adicione na lista de layers do widget FlutterMap(), o widget MarkerLayerOptions(), com o argumento **markers** apontando para a varíavel markers criada anteriormente.
 
 
 ```
@@ -283,7 +283,7 @@ Agora ao clicar na tela aparecem pins de cor vermelha.
 
 #### 6. Mostrar SnackBar com as coordenadas
 
-Para finalizar, iremos colocar um widget do tipo GestureDetector() nos ícones adicionados ao mapa para mostrar a coordenadas dos pins adicionados. Assim, envolva o widget Container() com o widget GestureDetector(). No atributo onTap, vamos adicionar um SnackBar com as coordenadas de cada ponto.
+Para finalizar, iremos colocar um widget do tipo GestureDetector() nos ícones adicionados ao mapa para mostrar a coordenadas dos pins adicionados. Assim, envolva o widget Container() com o widget GestureDetector(). No argumento onTap, vamos adicionar um SnackBar com as coordenadas de cada ponto.
 
 ```
 var markers = tappedPoints.map((latlng) {
