@@ -25,7 +25,7 @@ Para desenvolver este aplicativo é necessário que você já tenha o Flutter in
 
 ### Workflow
 
-- [*Código-Completo*] (#código-completo)(~~Para os apressadinhos!~~)
+- [*Código-Completo*](#código-completo)(~~Para os apressadinhos!~~)
 
 - [0. Criar um novo projeto Flutter](#0-criar-um-novo-projeto-flutter) 
 
