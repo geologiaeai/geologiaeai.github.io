@@ -9,8 +9,10 @@ Neste post mostrarei como desenvolver um aplicativo de mapa com o Flutter o qual
 e obter sua coordenada.
 
 <p align="center">
+ 
 ![](/img/post_flutter_markers/marker_demo.gif)
- </p>
+
+</p>
 
 
 O Flutter é um SDK desenvolvido pela Google que permite o desenvolvimento de aplicativos para multiplataformas, isto é, com o mesmo
