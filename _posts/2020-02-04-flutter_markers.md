@@ -261,7 +261,7 @@ Widget build(BuildContext context) {
    
 O valor de latlng da lista **tappedPoints** será utilizado como dicionário (map) para os marcadores. A função de mapeamento retornará um widget do tipo Marker o qual permite difinir a largura (width), altura (height) e coordenada (point) como atributos. Além disso, no atributo builder é definido o widget que aparecerá no mapa. Aqui será retornado um Widget Container que têm como filho um ícone (*pin_drop*) de cor vermelha.
 
-Para adicionar os ícones ao mapa, adicione na lista de layers do widget FlutterMap(), o widget, MarkerLayerOptions(), com o atributo **markers** apontando para a varíavel markers criada anteriormente.
+Para adicionar os ícones ao mapa, adicione na lista de layers do widget FlutterMap(), o widget MarkerLayerOptions(), com o atributo **markers** apontando para a varíavel markers criada anteriormente.
 
 
 ```
