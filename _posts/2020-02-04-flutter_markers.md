@@ -25,8 +25,6 @@ Para desenvolver este aplicativo é necessário que você já tenha o Flutter in
 
 ### Workflow
 
-- [*Código Completo*](#código-completo)(~~Para os apressadinhos!~~)
-
 - [0. Criar um novo projeto Flutter](#0-criar-um-novo-projeto-flutter) 
 
 - [1. Adicionar as bibliotecas](#1-adicionar-as-bibliotecas) 
@@ -40,6 +38,8 @@ Para desenvolver este aplicativo é necessário que você já tenha o Flutter in
 - [5. Adicionar os marcadores no mapa](#5-adicionar-os-marcadores-no-mapa) 
 
 - [6. Mostrar a SnackBar com as coordenadas](#6-mostrar-snackbar-com-as-coordenadas) 
+
+- [*Código Completo*](#código-completo)
 
 &nbsp;
 
