@@ -137,7 +137,7 @@ Ao rodar o aplicativo você obterá o seguinte resultado:
 
 #### 4. Adicionar o Mapa
 
-Agora iremos adicionar o mapa ao nosso aplicativo utilizando as bibliotecas importadas anteriormente. Para isso no atributo **body** do widget scaffold adicione o widget FlutterMap(). Este widget apresenta **options** e **layers** como atributos. O atributo **options** espera um widget do tipo MapOptions e o atributo layers espera uma lista do tipo LayerOptions. O código abaixo irá adicionar o mapa em nosso aplicativo.
+Agora iremos adicionar o mapa ao nosso aplicativo utilizando as bibliotecas importadas anteriormente. Para isso, no atributo **body**, do widget scaffold, adicione o widget FlutterMap(). Este widget apresenta **options** e **layers** como atributos. O atributo **options** espera um widget do tipo MapOptions e o atributo layers espera uma lista do tipo LayerOptions. O código abaixo irá adicionar o mapa em nosso aplicativo.
 
 
 ```flutter
@@ -164,7 +164,7 @@ Scaffold(
 
 ```
 
-O widget mapOptions() foi passado como atributo **options** do widget FlutterMap(). para estabelecer a coordenada central, e quantidade de zoom que aparecerá ao iniciar mapa:
+O widget mapOptions() foi passado como atributo **options** do widget FlutterMap() para estabelecer a coordenada central e quantidade de zoom que aparecerá ao iniciar mapa:
 
 ```
 MapOptions(
@@ -175,7 +175,7 @@ MapOptions(
 
 ```
 
-Já no atributo layers passamos uma lista que contém o widget TileLayerOptions(). Este widget recebe um url, no atributo **urltemplate**, que carrega o mapa no aplicativo.
+Já no atributo layers, passamos uma lista que contém o widget TileLayerOptions(). Este widget recebe um url, no atributo **urltemplate**, que carrega o mapa no aplicativo.
 
 ```
 [
@@ -189,7 +189,7 @@ Já no atributo layers passamos uma lista que contém o widget TileLayerOptions(
 Agora é possível ver um mapa no aplicativo que está centralizado no Congresso Nacional, em Brasília.
 
 
-![](/img/post_flutter_markers/mapa_app.png)
+![](/img/post_flutter_markers/mapa_app.gif)
 
 
 
