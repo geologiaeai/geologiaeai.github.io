@@ -29,7 +29,7 @@ Para desenvolver este aplicativo é necessário que você já tenha o Flutter in
 
 - [2. Importar as bibliotecas](#2-importar-as-bibliotecas) 
 
-- [3. Desenvolver a UI](#2-desenvolver-a-UI) 
+- [3. Desenvolver a UI](#3-desenvolver-a-UI) 
 
 &nbsp;
 
@@ -110,10 +110,7 @@ class _MyAppState extends State<MyApp> {
 
 ```
 
-A classe MyApp é do tipo statefulWidget o que permite aos widgets dispostos na tela serem atualizados futuramente. O widget scaffold foi adicionado no atributo **home** do widget MaterialApp. O código abaixo mostra como
-
-"
-A classe MyApp é do tipo statefulWidget o que permite aos widgets dispostos na tela serem atualizados futuramente. O widget scaffold foi adicionado no atributo **home** do widget MaterialApp. O código abaixo adiciona a barra superior do aplicativo, conhecida como AppBar e o título do aplicativo.
+A classe MyApp é do tipo statefulWidget o que permite aos widgets dispostos na tela serem atualizados futuramente. O widget scaffold foi adicionado no atributo **home** do widget MaterialApp. A parte final do código adiciona a barra superior do aplicativo, conhecida como AppBar, e o título do aplicativo.
 
 ```flutter
 // Habilita o uso do material design no aplicativo.
@@ -129,7 +126,11 @@ MaterialApp(
     );
 
 ```
+Ao rodar o aplicativo você obterá o seguinte resultado:
 
+
+
+![](/img/post_flutter_markers/ui_inicial.png)
 
 
 
