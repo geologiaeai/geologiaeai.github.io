@@ -1,20 +1,20 @@
 ---
 layout: page
 title: "Blog"
-subtitle: Geology / Remote Sensing & AI / Flutter 
+subtitle: Machine e Deep Learning aplicados à Geologia
 css: "/css/index.css"
-meta-title: "Dean Attali - R-Shiny consultant"
-meta-description: "Geologist with research in Remote Sensing and Artificial Inteligence."
+meta-title: "Geologia e AI"
+meta-description: "Blog de Machine e Deep Learning aplicados a Geologia"
 ---
 
 <div class="list-filters">
-  <a href="/rms" class="list-filter">Sensoriamento Remoto</a>
-   <span class="list-filter filter-selected">Flutter</span>
+  <a href="/rms" class="list-filter">Tutoriais - Hands On</a>
+   <span class="list-filter filter-selected">Teoria</span>
   <a href="/tags" class="list-filter">Tags</a>
 </div>
 
 <div class="posts-list">
-  {% for post in site.tags.flutter %}
+  {% for post in site.tags.teoria %}
   <article>
     <a class="post-preview" href="{{ post.url | prepend: site.baseurl }}">
 	    <h2 class="post-title">{{ post.title }}</h2>
